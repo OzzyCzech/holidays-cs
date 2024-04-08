@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "scripts": {
+    "ava": "ava",
+    "xo": "xo *.js",
+    "test": "ava && xo"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "@types/luxon": "^3.4.2",
+    "luxon": "^3.4.4",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "ava": "^6.1.2",
+    "ky": "^1.2.3",
+    "xo": "^0.58.0",
+    "ical.js": "^2.0.0",
+    "tsimp": "^2.0.11"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--import=tsimp"
+    ]
+  }
+}
