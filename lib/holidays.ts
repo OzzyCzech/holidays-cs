@@ -1,4 +1,5 @@
 import {DateTime} from "luxon";
+import {isEasterMonday, isGoodFriday} from "./easter.js";
 
 const holidays: Record<string, string> = {
 	"0101": "Den obnovy samostatného českého státu",
@@ -19,7 +20,7 @@ const holidays: Record<string, string> = {
  * @param date
  */
 export function isHoliday(date: DateTime): boolean {
-	return date.toFormat('ddMM') in holidays;
+	return isEasterMonday(date) || isGoodFriday(date) || date.toFormat('ddMM') in holidays;
 }
 
 /**
@@ -27,5 +28,12 @@ export function isHoliday(date: DateTime): boolean {
  * @param date
  */
 export function getHoliday(date: DateTime): string | undefined {
+	if (isEasterMonday(date)) {
+		return "Velikonoční pondělí";
+	}
+
+	if (isGoodFriday(date)) {
+		return "Velký pátek";
+	}
 	return holidays[date.toFormat('ddMM')];
 }
