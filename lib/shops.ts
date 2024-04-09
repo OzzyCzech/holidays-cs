@@ -5,7 +5,7 @@ import {isEasterMonday} from "./easter.js";
  * List of days when the shop is closed.
  * https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek
  */
-const closed = {
+const closed: Record<string, string> = {
 	"0101": "Nový rok",
 	"0805": "Den vítězství",
 	"2809": "Den české státnosti",
