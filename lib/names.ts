@@ -9,14 +9,14 @@ const names = data as Record<string, string[]>;
  * @param joinWith
  */
 export function getNameDay(date: DateTime, joinWith = ' a '): string {
-	return getDayNames(date).join(joinWith);
+	return getNames(date).join(joinWith);
 }
 
 /**
  * Get the names of the name day for the given date
  * @param date
  */
-export function getDayNames(date: DateTime): string[] {
+export function getNames(date: DateTime): string[] {
 	const day = date.toFormat('ddMM');
 	return day in names ? names[day] : [];
 }
