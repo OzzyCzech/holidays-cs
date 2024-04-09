@@ -32,7 +32,7 @@
       "ts": "module"
     },
     "files": [
-      "test/**/*"
+      "test/**/*.ts"
     ],
     "nodeArguments": [
       "--experimental-json-modules",
