@@ -1,5 +1,5 @@
 import test from 'ava';
-import {getFathersDay, isFatherDay} from '../lib/fathers-day';
+import {getFathersDay, isFatherDay} from '../lib/fathers-day.js';
 import {DateTime} from 'luxon';
 
 test('Check some father\'s days', t => {

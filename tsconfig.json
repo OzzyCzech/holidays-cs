@@ -5,8 +5,9 @@
     "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "bundler",
-    "resolveJsonModule": true
   },
   "include": [
     "lib/**/*"

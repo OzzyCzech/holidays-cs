@@ -1,4 +1,9 @@
 {
+  "name": "holidays-cs",
+  "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
+  "repository": "git@github.com:OzzyCzech/holidays-cs.git",
+  "license": "MIT",
+  "description": "Czech national holidays and name days",
   "type": "module",
   "scripts": {
     "ava": "ava",
@@ -26,7 +31,12 @@
     "extensions": {
       "ts": "module"
     },
+    "files": [
+      "test/**/*"
+    ],
     "nodeArguments": [
+      "--experimental-json-modules",
+      "--no-warnings",
       "--import=tsimp"
     ]
   }

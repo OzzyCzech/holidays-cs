@@ -1,4 +1,4 @@
-import holidays from './calendars/cs/holidays.json'
+import holidays from './holidays.json'
 import {DateTime} from "luxon";
 
 export function getHoliday(date: DateTime): string | undefined {
