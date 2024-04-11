@@ -7,13 +7,13 @@ on:
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-    runs-on: os
+    runs-on: ${{ matrix.os }}
 
     strategy:
       fail-fast: false
       matrix:
         node-version: [ 18, 20, 21 ]
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
 
     steps:
       - uses: actions/checkout@v4
