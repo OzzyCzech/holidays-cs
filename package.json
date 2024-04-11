@@ -6,6 +6,7 @@
   "description": "Public holidays, Easter, name days and important days in the Czech Republic.",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "ava": "ava",
     "xo": "xo *.js",
     "test": "ava && xo"
@@ -13,7 +14,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "dist"
   ],
   "dependencies": {
     "luxon": "^3.4.4"
