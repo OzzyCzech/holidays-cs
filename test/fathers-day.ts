@@ -1,5 +1,5 @@
 import test from 'ava';
-import {getFathersDay, isFatherDay} from '../lib/fathers-day.js';
+import {getFathersDay, isFathersDay} from '../lib/index.js';
 import {DateTime} from 'luxon';
 
 test('Check some father\'s days', t => {
@@ -9,7 +9,7 @@ test('Check some father\'s days', t => {
 });
 
 test('Check if a date is father\'s day', t => {
-	t.false(isFatherDay(DateTime.fromISO('2044-06-18')));
-	t.true(isFatherDay(DateTime.fromISO('2044-06-19')));
-	t.false(isFatherDay(DateTime.fromISO('2044-06-20')));
+	t.false(isFathersDay(DateTime.fromISO('2044-06-18')));
+	t.true(isFathersDay(DateTime.fromISO('2044-06-19')));
+	t.false(isFathersDay(DateTime.fromISO('2044-06-20')));
 });

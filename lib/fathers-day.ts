@@ -17,6 +17,6 @@ export function getFathersDay(year: number): DateTime {
  * @param date
  * @returns {*}
  */
-export function isFatherDay(date: DateTime): boolean {
+export function isFathersDay(date: DateTime): boolean {
 	return date.equals(getFathersDay(date.year));
 }
