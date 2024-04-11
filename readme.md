@@ -10,7 +10,7 @@ import * as holidays from 'holidays-cs';
 
 [Luxon](https://moment.github.io/luxon/) is used for date manipulation.
 You can pass a `Date` object or a `DateTime` object to the functions.
-Responses are always `DateTime` objects. If you need a `Date` object, 
+Responses are always `DateTime` objects. If you need a `Date` object,
 you can use the `response.toJSDate()` method.
 
 ## Name days
@@ -27,10 +27,27 @@ getNamesDay(new Date(2024, 11, 24)); // [ 'Adam', 'Eva' ]
 ```javascript
 import {isPublicHoliday, getPublicHoliday} from 'holidays-cs';
 
+// 1. january
 isPublicHoliday(new Date(2024, 0, 1)); // true
+
+// 2. january
 isPublicHoliday(new Date(2024, 0, 2)); // false
 
+// 17. november
+isPublicHoliday(new Date(2024, 10, 17)); // true
 getPublicHoliday(new Date(2024, 10, 17)); // Den boje za svobodu a demokracii (1939 a 1989)
+```
+
+## Fathers' and Mothers' day
+
+```javascript
+import {isFathersDay, isMothersDay} from 'holidays-cs';
+
+// 16. june 2024
+isFathersDay(new Date(2024, 5, 16)); // true
+
+// 12. may 2024
+isMothersDay(new Date(2024, 4, 12)); // true
 ```
 
 ## Credits
