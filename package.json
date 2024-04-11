@@ -33,7 +33,6 @@
     "files": [
       "test/**/*.ts"
     ],
-    "timeout": "1m",
     "nodeArguments": [
       "--experimental-json-modules",
       "--no-warnings",
