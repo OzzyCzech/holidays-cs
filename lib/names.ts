@@ -1,4 +1,5 @@
-import data from './names.json';
+// @ts-ignore
+import data from './names.json' assert {type: "json"};
 import {DateTime} from "luxon";
 
 const names = data as Record<string, string[]>;
