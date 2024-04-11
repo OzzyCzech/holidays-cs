@@ -49,6 +49,15 @@ export function getEasterSunday(year: number): DateTime {
 }
 
 /**
+ * Returns true if the given date is Easter Sunday.
+ * @param date
+ */
+export function isEasterSunday(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
+	return date.equals(getEasterSunday(date.year));
+}
+
+/**
  * Returns the date of Holy Saturday for a given year.
  * @param year
  */

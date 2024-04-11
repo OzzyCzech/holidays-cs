@@ -11,13 +11,13 @@ import {getNameDayArray} from "./names.js";
 import {isPublicHoliday, getPublicHoliday} from "./holidays.js";
 import {getSignificantDay, isSignificantDay} from "./significant.js";
 import {areShopsOpen, getShopsStatus} from "./shops.js";
-import {getEasterDayName, isEasterMonday, isGoodFriday, isHolySaturday, isHolyWeek} from "./easter.js";
+import {getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek} from "./easter.js";
 
 interface Easter {
 	name: string | undefined;
 	isGoodFriday: boolean;
 	isHolySaturday: boolean;
-	isHolySunday: boolean;
+	ieEasterSunday: boolean;
 	isEasterMonday: boolean;
 }
 
@@ -53,7 +53,7 @@ export function getDayMeta(date: DateTime | Date): DayMetadata {
 			name: getEasterDayName(date),
 			isGoodFriday: isGoodFriday(date),
 			isHolySaturday: isHolySaturday(date),
-			isHolySunday: isHolySaturday(date),
+			ieEasterSunday: isEasterSunday(date),
 			isEasterMonday: isEasterMonday(date),
 		}
 	}
