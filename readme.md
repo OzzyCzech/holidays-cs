@@ -102,6 +102,9 @@ areShopsOpen(new Date(2024, 11, 24)); // true
 
 // 25. december 2024
 getShopsStatus(new Date(2024, 11, 25)); // otevřeno do 12:00
+
+// New Year's Day 2025
+getShopsStatus(DateTime.fromISO('2025-01-01')); // zavřeno
 ```
 
 ## Father's and Mother's day
