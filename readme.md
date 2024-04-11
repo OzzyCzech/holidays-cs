@@ -106,8 +106,8 @@ getShopsStatus(new Date(2024, 11, 25)); // otevřeno do 12:00
 
 ## Father's and Mother's day
 
-Father's day is celebrated on the Third Sunday in June.
-Mother's day is celebrated on the second Sunday in May.
+Father's day is celebrated on the **third Sunday in June**.
+Mother's day is celebrated on the **second Sunday in May**.
 
 ```javascript
 import {DateTime} from 'luxon';
