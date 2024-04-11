@@ -3,7 +3,7 @@
   "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
   "repository": "git@github.com:OzzyCzech/holidays-cs.git",
   "license": "MIT",
-  "description": "Czech national holidays and name days",
+  "description": "Public holidays, Easter, name days and important days in the Czech Republic.",
   "type": "module",
   "scripts": {
     "ava": "ava",
@@ -38,5 +38,6 @@
       "--no-warnings",
       "--import=tsimp"
     ]
-  }
+  },
+  "version": "0.0.1"
 }
