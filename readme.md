@@ -22,7 +22,7 @@ getNameDay(new Date(2024, 11, 24)); // Adam a Eva
 getNamesDay(new Date(2024, 11, 24)); // [ 'Adam', 'Eva' ]
 ```
 
-## Public holidays
+## Czech public holidays
 
 ```javascript
 import {isPublicHoliday, getPublicHoliday} from 'holidays-cs';
@@ -36,6 +36,18 @@ isPublicHoliday(new Date(2024, 0, 2)); // false
 // 17. november
 isPublicHoliday(new Date(2024, 10, 17)); // true
 getPublicHoliday(new Date(2024, 10, 17)); // Den boje za svobodu a demokracii (1939 a 1989)
+```
+
+### Shops status
+
+```javascript
+import {areShopsOpen, getShopsStatus} from 'holidays-cs';
+
+// 24. december 2024
+areShopsOpen(new Date(2024, 11, 24)); // true
+
+// 25. december 2024
+getShopsStatus(new Date(2024, 11, 25)); // otevřeno do 12:00
 ```
 
 ## Fathers' and Mothers' day
