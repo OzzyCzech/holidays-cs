@@ -124,7 +124,7 @@ isPublicHoliday(DateTime.fromISO('2024-11-17')); // true
 getPublicHoliday(DateTime.fromISO('2024-11-17')); // Den boje za svobodu a demokracii (1939 a 1989)
 ```
 
-### Shops status
+#### Shops status
 
 In the Czech Republic, shops are closed on some public holidays.
 
