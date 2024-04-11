@@ -1,5 +1,5 @@
 import test from 'ava';
-import {getEasterSunday, isHolyWeek} from "../lib/easter.js";
+import {getEasterDayName, getEasterSunday, isHolyWeek} from "../lib/easter.js";
 import {DateTime} from "luxon";
 
 
@@ -41,4 +41,43 @@ test('If day is part of Holy Week', t => {
 	t.false(isHolyWeek(DateTime.fromISO('2024-12-26')));
 	t.false(isHolyWeek(DateTime.fromISO('2024-12-31')));
 	t.false(isHolyWeek(DateTime.fromISO('2025-01-01')));
+});
+
+
+test('Get Holy Week days names in 2024', t => {
+	// before Holy Week
+	t.falsy(getEasterDayName(DateTime.fromISO('2025-03-23')));
+
+	// 2024 Holy Week
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-24')), 'Květná neděle');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-25')), 'Modré pondělí');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-26')), 'Šedivé úterý');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-27')), 'Škaredá středa');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-28')), 'Zelený čtvrtek');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-29')), 'Velký pátek');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-30')), 'Bílá sobota');
+	t.is(getEasterDayName(DateTime.fromISO('2024-03-31')), 'Velikonoční neděle');
+	t.is(getEasterDayName(DateTime.fromISO('2024-04-01')), 'Velikonoční pondělí');
+
+	// after Holy Week
+	t.falsy(getEasterDayName(DateTime.fromISO('2025-04-02')));
+});
+
+test('Get Holy Week days names in 2025', t => {
+	// before Holy Week
+	t.falsy(getEasterDayName(DateTime.fromISO('2025-03-12')));
+
+	// 2025 Holy Week
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-13')), 'Květná neděle');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-14')), 'Modré pondělí');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-15')), 'Šedivé úterý');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-16')), 'Škaredá středa');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-17')), 'Zelený čtvrtek');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-18')), 'Velký pátek');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-19')), 'Bílá sobota');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-20')), 'Velikonoční neděle');
+	t.is(getEasterDayName(DateTime.fromISO('2025-04-21')), 'Velikonoční pondělí');
+
+	// after Holy Week
+	t.falsy(getEasterDayName(DateTime.fromISO('2025-04-22')));
 });

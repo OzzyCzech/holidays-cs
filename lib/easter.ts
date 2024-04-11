@@ -103,3 +103,29 @@ export function isHolyWeek(date: DateTime): boolean {
 	if (!interval.isValid) return false;
 	return interval.start && interval.end ? interval.start <= date && date <= interval.end : false;
 }
+
+/**
+ * Names of the days in Holy Week.
+ */
+const names: Record<string, string> = {
+	"-7": "Květná neděle",
+	"-6": "Modré pondělí",
+	"-5": "Šedivé úterý",
+	"-4": "Škaredá středa",
+	"-3": "Zelený čtvrtek",
+	"-2": "Velký pátek",
+	"-1": "Bílá sobota",
+	"0": "Velikonoční neděle",
+	"1": "Velikonoční pondělí",
+};
+
+/**
+ * Returns the name of the day for the given date in Holy Week.
+ * @param date
+ */
+export function getEasterDayName(date: DateTime): string | undefined {
+	if (isHolyWeek(date)) {
+		const index = date.diff(getEaster(date.year), 'days').as('days');
+		return names[index];
+	}
+}
