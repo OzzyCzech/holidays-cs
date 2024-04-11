@@ -130,6 +130,6 @@ export function getEasterDayName(date: DateTime | Date): string | undefined {
 	if (isHolyWeek(date)) {
 		date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 		const index = date.diff(getEaster(date.year), 'days').as('days');
-		return names[index];
+		return index in names ? names[index] : undefined;
 	}
 }
