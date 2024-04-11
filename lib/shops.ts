@@ -18,7 +18,7 @@ const closed: Record<string, string> = {
  * Returns the shop status for the given date.
  * @param date
  */
-export function getShopStatus(date: DateTime): string {
+export function getShopsStatus(date: DateTime): string {
 	// Easter Monday
 	if (isEasterMonday(date)) {
 		return "zavřeno";
@@ -37,6 +37,6 @@ export function getShopStatus(date: DateTime): string {
  * Returns true if the given date is a shop open day.
  * @param date
  */
-export function isOpen(date: DateTime): boolean {
-	return getShopStatus(date).startsWith("otevřeno")
+export function areShopsOpen(date: DateTime): boolean {
+	return getShopsStatus(date).startsWith("otevřeno")
 }
