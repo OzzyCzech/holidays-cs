@@ -15,6 +15,8 @@ you can use the `response.toJSDate()` method.
 
 ## Name days
 
+You can get the name day for a given date:
+
 ```javascript
 import {getNameDay, getNamesDay} from 'holidays-cs';
 
@@ -39,7 +41,7 @@ isEasterMonday(DateTime.fromISO('2024-04-01')); // true
 
 ### Easter date
 
-There are also functions for calculating the Easter date:
+Library can calculate the Easter date for a given year (it's Sunday):
 
 ```javascript
 import {getEaster} from 'holidays-cs';
@@ -102,20 +104,22 @@ areShopsOpen(new Date(2024, 11, 24)); // true
 getShopsStatus(new Date(2024, 11, 25)); // otevřeno do 12:00
 ```
 
-## Father's day and Mother's day
+## Father's and Mother's day
 
 Father's day is celebrated on the Third Sunday in June.
 Mother's day is celebrated on the second Sunday in May.
 
 ```javascript
 import {DateTime} from 'luxon';
-import {isFathersDay, isMothersDay} from 'holidays-cs';
+import {isFathersDay, getFathersDay, isMothersDay, getMothersDay} from 'holidays-cs';
 
 // 16. june 2024
 isFathersDay(DateTime.fromISO('2024-06-16')); // true
+getFathersDay(2024).toISODate(); // 2024-06-16
 
 // 12. may 2024
 isMothersDay(DateTime.fromISO('2024-05-12')); // true
+getMothersDay(2024).toISODate(); // 2024-05-12
 ```
 
 ## Credits
