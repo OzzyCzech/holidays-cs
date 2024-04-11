@@ -169,4 +169,4 @@ getMothersDay(2024).toISODate(); // 2024-05-12
 
 ## License
 
-- MIT
+MIT
