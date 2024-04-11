@@ -6,7 +6,7 @@ export * from "./names.js";
 export * from "./shops.js";
 
 import {DateTime} from "luxon";
-import {getNames} from "./names.js";
+import {getNamesDay} from "./names.js";
 import {isPublicHoliday, getPublicHoliday} from "./holidays.js";
 import {getSignificantDay, isSignificantDay} from "./significant.js";
 import {areShopsOpen, getShopsStatus} from "./shops.js";
@@ -43,9 +43,9 @@ interface DayMetadata {
  * Get metadata for a specific day
  * @param date
  */
-export function getDayMeta(date: DateTime): DayMetadata {
+export function getDayMeta(date: DateTime | Date): DayMetadata {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 
-	// Easter metadata
 	let easter: Easter | undefined = undefined;
 	if (isHolyWeek(date)) {
 		easter = {
@@ -63,7 +63,7 @@ export function getDayMeta(date: DateTime): DayMetadata {
 	}
 
 	return {
-		names: getNames(date),
+		names: getNamesDay(date),
 
 		// easter metadata
 		easter: easter,

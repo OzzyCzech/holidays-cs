@@ -60,7 +60,8 @@ export function getHolySaturday(year: number): DateTime {
  * Returns true if the given date is Holy Saturday.
  * @param date
  */
-export function isHolySaturday(date: DateTime): boolean {
+export function isHolySaturday(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return date.equals(getHolySaturday(date.year));
 }
 
@@ -76,7 +77,8 @@ export function getGoodFriday(year: number): DateTime {
  * Returns true if the given date is Good Friday.
  * @param date
  */
-export function isGoodFriday(date: DateTime): boolean {
+export function isGoodFriday(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return date.equals(getGoodFriday(date.year));
 }
 
@@ -98,7 +100,8 @@ export function getHollyWeekInterval(year: number): Interval {
  * Returns true if the given date is part of Holy Week.
  * @param date
  */
-export function isHolyWeek(date: DateTime): boolean {
+export function isHolyWeek(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	const interval = getHollyWeekInterval(date.year);
 	if (!interval.isValid) return false;
 	return interval.start && interval.end ? interval.start <= date && date <= interval.end : false;
@@ -123,8 +126,9 @@ const names: Record<string, string> = {
  * Returns the name of the day for the given date in Holy Week.
  * @param date
  */
-export function getEasterDayName(date: DateTime): string | undefined {
+export function getEasterDayName(date: DateTime | Date): string | undefined {
 	if (isHolyWeek(date)) {
+		date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 		const index = date.diff(getEaster(date.year), 'days').as('days');
 		return names[index];
 	}

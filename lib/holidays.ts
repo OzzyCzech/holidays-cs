@@ -19,7 +19,8 @@ const holidays: Record<string, string> = {
  * Check if the given date is a holiday
  * @param date
  */
-export function isPublicHoliday(date: DateTime): boolean {
+export function isPublicHoliday(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return isEasterMonday(date) || isGoodFriday(date) || date.toFormat('ddMM') in holidays;
 }
 
@@ -27,7 +28,8 @@ export function isPublicHoliday(date: DateTime): boolean {
  * Get the name of the holiday for the given date
  * @param date
  */
-export function getPublicHoliday(date: DateTime): string | undefined {
+export function getPublicHoliday(date: DateTime | Date): string | undefined {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	if (isEasterMonday(date)) {
 		return "Velikonoční pondělí";
 	}

@@ -17,6 +17,7 @@ export function getMothersDay(year: number): DateTime {
  * @param date
  * @returns {*}
  */
-export function isMothersDay(date: DateTime): boolean {
+export function isMothersDay(date: DateTime | Date): boolean {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return date.equals(getMothersDay(date.year));
 }
