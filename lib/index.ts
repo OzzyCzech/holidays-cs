@@ -3,17 +3,18 @@ export * from "./holidays.js";
 export * from "./fathers-day.js";
 export * from "./mothers-day.js";
 export * from "./names.js";
+export * from "./significant.js";
 export * from "./shops.js";
 
 import {DateTime} from "luxon";
-import {getNamesDay} from "./names.js";
+import {getNameDayArray} from "./names.js";
 import {isPublicHoliday, getPublicHoliday} from "./holidays.js";
 import {getSignificantDay, isSignificantDay} from "./significant.js";
 import {areShopsOpen, getShopsStatus} from "./shops.js";
 import {getEasterDayName, isEasterMonday, isGoodFriday, isHolySaturday, isHolyWeek} from "./easter.js";
 
 interface Easter {
-	name: string
+	name: string | undefined;
 	isGoodFriday: boolean;
 	isHolySaturday: boolean;
 	isHolySunday: boolean;
@@ -63,7 +64,7 @@ export function getDayMeta(date: DateTime | Date): DayMetadata {
 	}
 
 	return {
-		names: getNamesDay(date),
+		names: getNameDayArray(date),
 
 		// easter metadata
 		easter: easter,

@@ -1,6 +1,6 @@
 import test from 'ava';
 import {DateTime} from "luxon";
-import {getShopsStatus, areShopsOpen} from "../lib/shops.js";
+import {getShopsStatus, areShopsOpen} from "../lib/index.js";
 
 test('Check shops open/close status', t => {
 	t.is(getShopsStatus(DateTime.fromISO('2024-12-25')), 'zavřeno');

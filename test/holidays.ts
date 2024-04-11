@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import {getPublicHoliday} from "../lib/holidays.js";
+import {getPublicHoliday} from "../lib/index.js";
 import {DateTime} from 'luxon';
 
 test('Selected czech holidays', t => {

@@ -18,10 +18,10 @@ you can use the `response.toJSDate()` method.
 You can get the name day for a given date:
 
 ```javascript
-import {getNameDay, getNamesDay} from 'holidays-cs';
+import {getNameDay, getNameDayArray} from 'holidays-cs';
 
 getNameDay(new Date(2024, 11, 24)); // Adam a Eva
-getNamesDay(new Date(2024, 11, 24)); // [ 'Adam', 'Eva' ]
+getNameDayArray(new Date(2024, 11, 24)); // [ 'Adam', 'Eva' ]
 ```
 
 ## Easter
@@ -95,6 +95,7 @@ getPublicHoliday(new Date(2024, 10, 17)); // Den boje za svobodu a demokracii (1
 In the Czech Republic, shops are closed on some public holidays.
 
 ```javascript
+import {DateTime} from 'luxon';
 import {areShopsOpen, getShopsStatus} from 'holidays-cs';
 
 // 24. december 2024

@@ -1,5 +1,5 @@
 import test from 'ava';
-import {getEasterDayName, getEasterSunday, isHolyWeek} from "../lib/easter.js";
+import {getEasterDayName, getEasterSunday, isHolyWeek} from "../lib/index.js";
 import {DateTime} from "luxon";
 
 
