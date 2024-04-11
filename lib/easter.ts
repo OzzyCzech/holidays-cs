@@ -141,4 +141,6 @@ export function getEasterDayName(date: DateTime | Date): string | undefined {
 		const index = date.diff(getEaster(date.year), 'days').as('days');
 		return index in names ? names[index] : undefined;
 	}
+
+	return undefined;
 }

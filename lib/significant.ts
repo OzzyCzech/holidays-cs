@@ -7,7 +7,7 @@ const significant = data as Record<string, string>;
  * Returns the significant day for the given date.
  * @param date
  */
-export function getSignificantDay(date: DateTime | Date): string {
+export function getSignificantDay(date: DateTime | Date): string | undefined {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return significant[date.toFormat('ddMM')];
 }

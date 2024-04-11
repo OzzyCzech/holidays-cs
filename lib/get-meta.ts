@@ -19,7 +19,7 @@ interface ShopsStatus {
 }
 
 interface DayMetadata {
-	names: string[];
+	names: string[] | undefined;
 
 	isSignificantDay: boolean;
 	significantDay: string | undefined;

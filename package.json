@@ -1,15 +1,23 @@
 {
   "name": "holidays-cs",
+  "version": "0.0.4",
   "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
   "repository": "git@github.com:OzzyCzech/holidays-cs.git",
   "license": "MIT",
   "description": "Public holidays, Easter, name days and important days in the Czech Republic.",
   "type": "module",
+  "exports": {
+    "types": "./dist/source/index.d.ts",
+    "default": "./dist/source/index.js"
+  },
   "scripts": {
     "build": "tsc",
-    "ava": "ava",
+    "ava": "NODE_OPTIONS='--import=tsx/esm' ava",
     "xo": "xo *.js",
-    "test": "ava && xo"
+    "test": "xo && tsc --noEmit && ava"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,21 +32,22 @@
     "@types/node": "^20.12.7",
     "ava": "^6.1.2",
     "tsimp": "^2.0.11",
+    "tsx": "^4.7.2",
     "typescript": "^5.4.5",
     "xo": "^0.58.0"
   },
   "ava": {
+    "timeout": "1m",
     "extensions": {
       "ts": "module"
     },
     "files": [
-      "test/**/*.ts"
+      "test/*"
     ],
+    "workerThreads": false,
     "nodeArguments": [
       "--experimental-json-modules",
-      "--no-warnings",
-      "--import=tsimp"
+      "--no-warnings"
     ]
-  },
-  "version": "0.0.4"
+  }
 }
