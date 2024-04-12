@@ -1,5 +1,11 @@
 # Holidays (cs)
 
+[![NPM Downloads](https://img.shields.io/npm/dm/holidays-cs?style=for-the-badge)](https://www.npmjs.com/package/holidays-cs)
+[![NPM Version](https://img.shields.io/npm/v/holidays-cs?style=for-the-badge)](https://www.npmjs.com/package/holidays-cs)
+[![NPM License](https://img.shields.io/npm/l/holidays-cs?style=for-the-badge)](https://github.com/OzzyCzech/holidays-cs/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/OzzyCzech/holidays-cs?style=for-the-badge)](https://github.com/OzzyCzech/holidays-cs/commits/main)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/OzzyCzech/holidays-cs/main.yml?style=for-the-badge)](https://github.com/OzzyCzech/holidays-cs/actions)
+
 Public holidays, Easter, name days and important days in the Czech Republic.
 
 ## Functions
