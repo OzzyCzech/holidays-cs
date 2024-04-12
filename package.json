@@ -5,6 +5,14 @@
   "repository": "git@github.com:OzzyCzech/holidays-cs.git",
   "license": "MIT",
   "description": "Public holidays, Easter, name days and important days in the Czech Republic.",
+  "keywords": [
+    "czechia",
+    "czech republic",
+    "public holidays",
+    "holidays",
+    "name day",
+    "easter"
+  ],
   "type": "module",
   "exports": {
     "types": "./dist/index.d.ts",
@@ -14,7 +22,7 @@
     "build": "tsc",
     "ava": "NODE_OPTIONS='--import=tsx/esm' ava",
     "xo": "xo --fix",
-    "test": "xo && tsc --noEmit && ava"
+    "test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava"
   },
   "engines": {
     "node": ">=20"
