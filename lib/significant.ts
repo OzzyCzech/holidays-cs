@@ -1,6 +1,5 @@
-// @ts-ignore
-import data from './significant.json' assert {type: "json"};
-import {DateTime} from "luxon";
+import {DateTime} from 'luxon';
+import data from './significant.json' assert {type: 'json'};
 
 const significant = data as Record<string, string>;
 

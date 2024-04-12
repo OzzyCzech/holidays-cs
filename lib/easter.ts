@@ -1,4 +1,4 @@
-import {DateTime, Interval} from "luxon";
+import {DateTime, Interval} from 'luxon';
 
 /**
  * Returns the date of Easter Monday for a given year.
@@ -30,20 +30,20 @@ export function getEaster(year: number): DateTime {
  * @param year
  */
 export function getEasterSunday(year: number): DateTime {
-	let a = year % 19;
-	let b = Math.floor(year / 100);
-	let c = year % 100;
-	let d = Math.floor(b / 4);
-	let e = b % 4;
-	let f = Math.floor((b + 8) / 25);
-	let g = Math.floor((b - f + 1) / 3);
-	let h = (19 * a + b - d - g + 15) % 30;
-	let i = Math.floor(c / 4);
-	let k = c % 4;
-	let l = (32 + 2 * e + 2 * i - h - k) % 7;
-	let m = Math.floor((a + 11 * h + 22 * l) / 451);
-	let month = Math.floor((h + l - 7 * m + 114) / 31);
-	let day = ((h + l - 7 * m + 114) % 31) + 1;
+	const a = year % 19;
+	const b = Math.floor(year / 100);
+	const c = year % 100;
+	const d = Math.floor(b / 4);
+	const e = b % 4; // eslint-disable-line unicorn/prevent-abbreviations
+	const f = Math.floor((b + 8) / 25);
+	const g = Math.floor((b - f + 1) / 3);
+	const h = (19 * a + b - d - g + 15) % 30;
+	const i = Math.floor(c / 4);
+	const k = c % 4;
+	const l = (32 + 2 * e + 2 * i - h - k) % 7;
+	const m = Math.floor((a + 11 * h + 22 * l) / 451);
+	const month = Math.floor((h + l - 7 * m + 114) / 31);
+	const day = ((h + l - 7 * m + 114) % 31) + 1;
 
 	return DateTime.fromObject({year, month, day});
 }
@@ -97,11 +97,11 @@ export function isGoodFriday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getHollyWeekInterval(year: number): Interval {
-	let easter = getEaster(year);
+	const easter = getEaster(year);
 
 	return Interval.fromDateTimes(
 		easter.minus({days: 7}), // Palm Sunday
-		easter.plus({days: 1}) // Easter Monday
+		easter.plus({days: 1}), // Easter Monday
 	);
 }
 
@@ -112,7 +112,10 @@ export function getHollyWeekInterval(year: number): Interval {
 export function isHolyWeek(date: DateTime | Date): boolean {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	const interval = getHollyWeekInterval(date.year);
-	if (!interval.isValid) return false;
+	if (!interval.isValid) {
+		return false;
+	}
+
 	return interval.start && interval.end ? interval.start <= date && date <= interval.end : false;
 }
 
@@ -120,15 +123,15 @@ export function isHolyWeek(date: DateTime | Date): boolean {
  * Names of the days in Holy Week.
  */
 const names: Record<string, string> = {
-	"-7": "Květná neděle",
-	"-6": "Modré pondělí",
-	"-5": "Šedivé úterý",
-	"-4": "Škaredá středa",
-	"-3": "Zelený čtvrtek",
-	"-2": "Velký pátek",
-	"-1": "Bílá sobota",
-	"0": "Velikonoční neděle",
-	"1": "Velikonoční pondělí",
+	'-7': 'Květná neděle',
+	'-6': 'Modré pondělí',
+	'-5': 'Šedivé úterý',
+	'-4': 'Škaredá středa',
+	'-3': 'Zelený čtvrtek',
+	'-2': 'Velký pátek',
+	'-1': 'Bílá sobota',
+	0: 'Velikonoční neděle',
+	1: 'Velikonoční pondělí',
 };
 
 /**

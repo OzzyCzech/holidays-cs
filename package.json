@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "ava": "NODE_OPTIONS='--import=tsx/esm' ava",
-    "xo": "xo *.js",
+    "xo": "xo --fix",
     "test": "xo && tsc --noEmit && ava"
   },
   "engines": {
@@ -49,5 +49,10 @@
       "--experimental-json-modules",
       "--no-warnings"
     ]
+  },
+  "xo": {
+    "rules": {
+      "@typescript-eslint/naming-convention": "off"
+    }
   }
 }

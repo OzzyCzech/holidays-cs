@@ -1,6 +1,6 @@
 import test from 'ava';
-import {getFathersDay, isFathersDay} from '../lib/index.js';
 import {DateTime} from 'luxon';
+import {getFathersDay, isFathersDay} from '../lib/index.js';
 
 test('Check some father\'s days', t => {
 	t.is(getFathersDay(2044).toISODate(), '2044-06-19');

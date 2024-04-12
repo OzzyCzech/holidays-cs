@@ -1,9 +1,8 @@
 import test from 'ava';
-import {getDayMeta} from "../lib/index.js";
-import {DateTime} from "luxon";
+import {DateTime} from 'luxon';
+import {getDayMeta} from '../lib/index.js';
 
-
-test("Christmas Eve in 2024", t => {
+test('Christmas Eve in 2024', t => {
 	const meta = getDayMeta(DateTime.fromISO('2024-12-24'));
 	t.is(meta.publicHoliday, 'Štědrý den');
 

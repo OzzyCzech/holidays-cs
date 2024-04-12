@@ -1,9 +1,11 @@
-import {DateTime} from "luxon";
-import {getNameDayArray} from "./names.js";
-import {getPublicHoliday, isPublicHoliday} from "./holidays.js";
-import {getSignificantDay, isSignificantDay} from "./significant.js";
-import {areShopsOpen, getShopsStatus} from "./shops.js";
-import {getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek} from "./easter.js";
+import {DateTime} from 'luxon';
+import {getNameDayArray} from './names.js';
+import {getPublicHoliday, isPublicHoliday} from './holidays.js';
+import {getSignificantDay, isSignificantDay} from './significant.js';
+import {areShopsOpen, getShopsStatus} from './shops.js';
+import {
+	getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek,
+} from './easter.js';
 
 export type EasterMetadata = {
 	name: string | undefined;
@@ -11,7 +13,7 @@ export type EasterMetadata = {
 	isHolySaturday: boolean;
 	ieEasterSunday: boolean;
 	isEasterMonday: boolean;
-}
+};
 
 export type DayMetadata = {
 	// Name days metadata
@@ -30,8 +32,8 @@ export type DayMetadata = {
 	easter?: EasterMetadata | undefined;
 
 	// Shops metadata
-	shops: { areOpen: boolean, status: string };
-}
+	shops: {areOpen: boolean; status: string};
+};
 
 /**
  * Get metadata for a specific day
@@ -40,10 +42,10 @@ export type DayMetadata = {
 export function getDayMeta(date: DateTime | Date): DayMetadata {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 
-	let meta: DayMetadata = {
+	const meta: DayMetadata = {
 		names: getNameDayArray(date),
 
-		// flags
+		// Flags
 		isSignificantDay: isSignificantDay(date),
 		isPublicHoliday: isPublicHoliday(date),
 
@@ -53,8 +55,8 @@ export function getDayMeta(date: DateTime | Date): DayMetadata {
 		// Shops
 		shops: {
 			areOpen: areShopsOpen(date),
-			status: getShopsStatus(date)
-		}
+			status: getShopsStatus(date),
+		},
 	};
 
 	if (meta.isSignificantDay) {
@@ -72,7 +74,7 @@ export function getDayMeta(date: DateTime | Date): DayMetadata {
 			isHolySaturday: isHolySaturday(date),
 			ieEasterSunday: isEasterSunday(date),
 			isEasterMonday: isEasterMonday(date),
-		}
+		};
 	}
 
 	return meta;

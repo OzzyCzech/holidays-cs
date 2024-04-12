@@ -1,6 +1,6 @@
-import {getNameDayArray, getNameDay} from "../lib/index.js";
-import {DateTime} from "luxon";
+import {DateTime} from 'luxon';
 import test from 'ava';
+import {getNameDayArray, getNameDay} from '../lib/index.js';
 
 test('Check some significant names', t => {
 	// 2024-10-31 is the day of Štěpánka
@@ -39,6 +39,6 @@ test('Check days without names', t => {
 	t.is(getNameDay(DateTime.fromISO('2024-10-28')), '');
 
 	// St. Cyril and Methodius Day
-	t.deepEqual(getNameDayArray(DateTime.fromISO('2024-07-05')), ["Cyril", "Metoděj"]);
+	t.deepEqual(getNameDayArray(DateTime.fromISO('2024-07-05')), ['Cyril', 'Metoděj']);
 	t.is(getNameDay(DateTime.fromISO('2024-07-05')), 'Cyril a Metoděj');
-})
+});

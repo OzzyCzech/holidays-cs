@@ -1,6 +1,5 @@
-// @ts-ignore
-import data from './names.json' assert {type: "json"};
-import {DateTime} from "luxon";
+import {DateTime} from 'luxon';
+import data from './names.json' assert {type: 'json'};
 
 const names = data as Record<string, string[]>;
 
@@ -11,7 +10,7 @@ const names = data as Record<string, string[]>;
  */
 export function getNameDay(date: DateTime | Date, joinWith = ' a '): string {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return getNameDayArray(date)?.join(joinWith) || '';
+	return getNameDayArray(date)?.join(joinWith) ?? '';
 }
 
 /**
