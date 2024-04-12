@@ -1,11 +1,11 @@
 import {DateTime} from "luxon";
 import {getNameDayArray} from "./names.js";
-import {isPublicHoliday, getPublicHoliday} from "./holidays.js";
+import {getPublicHoliday, isPublicHoliday} from "./holidays.js";
 import {getSignificantDay, isSignificantDay} from "./significant.js";
 import {areShopsOpen, getShopsStatus} from "./shops.js";
 import {getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek} from "./easter.js";
 
-interface Easter {
+export type EasterMetadata = {
 	name: string | undefined;
 	isGoodFriday: boolean;
 	isHolySaturday: boolean;
@@ -13,23 +13,24 @@ interface Easter {
 	isEasterMonday: boolean;
 }
 
-interface ShopsStatus {
-	areOpen: boolean;
-	status: string;
-}
-
-interface DayMetadata {
+export type DayMetadata = {
+	// Name days metadata
 	names: string[] | undefined;
 
+	// Significant days metadata
 	isSignificantDay: boolean;
-	significantDay: string | undefined;
+	significantDay?: string | undefined;
 
+	// Public holidays metadata
 	isPublicHoliday: boolean;
-	publicHoliday: string | undefined;
+	publicHoliday?: string | undefined;
 
 	// Easter metadata
-	easter: Easter | undefined;
-	shops: ShopsStatus
+	isHolyWeek: boolean;
+	easter?: EasterMetadata | undefined;
+
+	// Shops metadata
+	shops: { areOpen: boolean, status: string };
 }
 
 /**
@@ -39,9 +40,33 @@ interface DayMetadata {
 export function getDayMeta(date: DateTime | Date): DayMetadata {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 
-	let easter: Easter | undefined = undefined;
-	if (isHolyWeek(date)) {
-		easter = {
+	let meta: DayMetadata = {
+		names: getNameDayArray(date),
+
+		// flags
+		isSignificantDay: isSignificantDay(date),
+		isPublicHoliday: isPublicHoliday(date),
+
+		// Easter
+		isHolyWeek: isHolyWeek(date),
+
+		// Shops
+		shops: {
+			areOpen: areShopsOpen(date),
+			status: getShopsStatus(date)
+		}
+	};
+
+	if (meta.isSignificantDay) {
+		meta.significantDay = getSignificantDay(date);
+	}
+
+	if (meta.isPublicHoliday) {
+		meta.publicHoliday = getPublicHoliday(date);
+	}
+
+	if (meta.isHolyWeek) {
+		meta.easter = {
 			name: getEasterDayName(date),
 			isGoodFriday: isGoodFriday(date),
 			isHolySaturday: isHolySaturday(date),
@@ -50,26 +75,5 @@ export function getDayMeta(date: DateTime | Date): DayMetadata {
 		}
 	}
 
-	let shops: ShopsStatus = {
-		areOpen: areShopsOpen(date),
-		status: getShopsStatus(date)
-	}
-
-	return {
-		names: getNameDayArray(date),
-
-		// easter metadata
-		easter: easter,
-
-		// national significant days
-		isSignificantDay: isSignificantDay(date),
-		significantDay: getSignificantDay(date),
-
-		// national holidays
-		isPublicHoliday: isPublicHoliday(date),
-		publicHoliday: getPublicHoliday(date),
-
-		// shops metadata
-		shops: shops
-	};
+	return meta;
 }
