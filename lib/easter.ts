@@ -1,19 +1,20 @@
 import {DateTime, Interval} from 'luxon';
+import * as easter from 'easter-date';
 
 /**
  * Returns the date of Easter Monday for a given year.
  * @param year
  */
 export function getEasterMonday(year: number): DateTime {
-	return getEaster(year).plus({days: 1});
+	return DateTime.fromJSDate(easter.getEasterMonday(year));
 }
 
 /**
  * Returns true if the given date is Easter Monday.
  * @param date
  */
-export function isEasterMonday(date: DateTime): boolean {
-	return date.equals(getEasterMonday(date.year));
+export function isEasterMonday(date: DateTime | Date): boolean {
+	return easter.isEasterMonday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -22,7 +23,7 @@ export function isEasterMonday(date: DateTime): boolean {
  * @param year
  */
 export function getEaster(year: number): DateTime {
-	return getEasterSunday(year);
+	return DateTime.fromJSDate(easter.getEaster(year));
 }
 
 /**
@@ -30,22 +31,7 @@ export function getEaster(year: number): DateTime {
  * @param year
  */
 export function getEasterSunday(year: number): DateTime {
-	const a = year % 19;
-	const b = Math.floor(year / 100);
-	const c = year % 100;
-	const d = Math.floor(b / 4);
-	const e = b % 4; // eslint-disable-line unicorn/prevent-abbreviations
-	const f = Math.floor((b + 8) / 25);
-	const g = Math.floor((b - f + 1) / 3);
-	const h = ((19 * a) + b - d - g + 15) % 30;
-	const i = Math.floor(c / 4);
-	const k = c % 4;
-	const l = (32 + (2 * e) + (2 * i) - h - k) % 7;
-	const m = Math.floor((a + (11 * h) + (22 * l)) / 451);
-	const month = Math.floor((h + l - (7 * m) + 114) / 31);
-	const day = ((h + l - (7 * m) + 114) % 31) + 1;
-
-	return DateTime.fromObject({year, month, day});
+	return DateTime.fromJSDate(easter.getEasterSunday(year));
 }
 
 /**
@@ -53,8 +39,7 @@ export function getEasterSunday(year: number): DateTime {
  * @param date
  */
 export function isEasterSunday(date: DateTime | Date): boolean {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.equals(getEasterSunday(date.year));
+	return easter.isEasterSunday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -62,7 +47,7 @@ export function isEasterSunday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getHolySaturday(year: number): DateTime {
-	return getEaster(year).minus({days: 1});
+	return DateTime.fromJSDate(easter.getHolySaturday(year));
 }
 
 /**
@@ -70,8 +55,7 @@ export function getHolySaturday(year: number): DateTime {
  * @param date
  */
 export function isHolySaturday(date: DateTime | Date): boolean {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.equals(getHolySaturday(date.year));
+	return easter.isHolySaturday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -79,7 +63,7 @@ export function isHolySaturday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getGoodFriday(year: number): DateTime {
-	return getEaster(year).minus({days: 2});
+	return DateTime.fromJSDate(easter.getGoodFriday(year));
 }
 
 /**
@@ -87,8 +71,7 @@ export function getGoodFriday(year: number): DateTime {
  * @param date
  */
 export function isGoodFriday(date: DateTime | Date): boolean {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.equals(getGoodFriday(date.year));
+	return easter.isGoodFriday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
