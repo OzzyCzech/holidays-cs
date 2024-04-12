@@ -124,6 +124,14 @@ isPublicHoliday(DateTime.fromISO('2024-11-17')); // true
 getPublicHoliday(DateTime.fromISO('2024-11-17')); // Den boje za svobodu a demokracii (1939 a 1989)
 ```
 
+You can get all public holidays for a given year:
+
+```javascript
+import {getPublicHolidaysList} from 'holidays-cs';
+
+getPublicHolidaysList(2024); // returns Map with all 13 holidays
+```
+
 ### Shops status
 
 In the Czech Republic, shops are closed on some public holidays.
@@ -145,8 +153,8 @@ getShopsStatus(DateTime.fromISO('2025-01-01')); // zavřeno
 
 ## Father's and Mother's day
 
-Father's day is celebrated on the **third Sunday in June**.
-Mother's day is celebrated on the **second Sunday in May**.
+Father's Day is celebrated on the **third Sunday in June**.
+Mother's Day is celebrated on the **second Sunday in May**.
 
 ```javascript
 import {DateTime} from 'luxon';

@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "ava": "NODE_OPTIONS='--import=tsx/esm' ava",
-    "xo": "xo --fix",
+    "xo": "xo",
     "test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava"
   },
   "engines": {
@@ -60,7 +60,8 @@
   },
   "xo": {
     "rules": {
-      "@typescript-eslint/naming-convention": "off"
+      "@typescript-eslint/naming-convention": "off",
+      "quote-props": "off"
     }
   }
 }

@@ -8,10 +8,10 @@ import {isEasterMonday} from './easter.js';
 const closed: Record<string, string> = {
 	'0101': 'Nový rok',
 	'0805': 'Den vítězství',
-	2809: 'Den české státnosti',
-	2810: 'Den vzniku samostatného československého státu',
-	2512: '1. svátek vánoční',
-	2612: '2. svátek vánoční',
+	'2809': 'Den české státnosti',
+	'2810': 'Den vzniku samostatného československého státu',
+	'2512': '1. svátek vánoční',
+	'2612': '2. svátek vánoční',
 };
 
 /**
