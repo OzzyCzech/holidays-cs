@@ -6,7 +6,7 @@ import {DateTime} from 'luxon';
  * @returns {DateTime}
  */
 export function getFathersDay(year: number): DateTime {
-	return DateTime.fromObject({year, month: 6, day: 1})
+	return DateTime.fromObject({year, month: 6, day: 1}, {locale: 'en'})
 		.plus({weeks: 2})
 		.startOf('week')
 		.plus({days: 6});
@@ -19,5 +19,5 @@ export function getFathersDay(year: number): DateTime {
  */
 export function isFathersDay(date: DateTime | Date): boolean {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.equals(getFathersDay(date.year));
+	return getFathersDay(date.year).hasSame(date, 'day');
 }

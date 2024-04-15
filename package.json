@@ -33,7 +33,7 @@
     "dist"
   ],
   "dependencies": {
-    "easter-date": "^0.0.3",
+    "easter-date": "^0.0.4",
     "luxon": "^3.4.4",
     "namedays-cs": "^0.0.3"
   },

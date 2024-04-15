@@ -6,7 +6,7 @@ import {DateTime} from 'luxon';
  * @returns {DateTime}
  */
 export function getMothersDay(year: number): DateTime {
-	return DateTime.fromObject({year, month: 5, day: 1})
+	return DateTime.fromObject({year, month: 5, day: 1}, {locale: 'en'})
 		.plus({weeks: 1})
 		.startOf('week')
 		.plus({days: 6});
@@ -19,5 +19,5 @@ export function getMothersDay(year: number): DateTime {
  */
 export function isMothersDay(date: DateTime | Date): boolean {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.equals(getMothersDay(date.year));
+	return getMothersDay(date.year).hasSame(date, 'day');
 }

@@ -1055,10 +1055,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-easter-date@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.3.tgz#3a9e9a047d0349be8aa96810a636f14cf2fece62"
-  integrity sha512-oJY5Fon1D1fBugERyei4pWePi9tPeTohR/YcKUta9GRtw5rDLwj7MfZi06XNWQfJO9OGT4PoI/4d6hWHIYHkEA==
+easter-date@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.4.tgz#383f309ff402916d6fa5fbc6576585260e2931f2"
+  integrity sha512-3A60r+z4/wG/66v8S8cDYQsR7k6QOmZJ4Aku4PFEW3T6SNnKE53W6rYKPK3lCXhhMbkuZ51AbIEjfVFWvMvSlQ==
 
 electron-to-chromium@^1.4.668:
   version "1.4.733"
