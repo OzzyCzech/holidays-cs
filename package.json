@@ -35,7 +35,7 @@
   "dependencies": {
     "easter-date": "^0.0.3",
     "luxon": "^3.4.4",
-    "namedays-cs": "^0.0.2"
+    "namedays-cs": "^0.0.3"
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
