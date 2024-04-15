@@ -2,7 +2,7 @@
   "name": "holidays-cs",
   "version": "0.1.8",
   "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
-  "repository": "git@github.com:OzzyCzech/holidays-cs.git",
+  "repository": "OzzyCzech/holidays-cs",
   "license": "MIT",
   "description": "Public holidays, Easter, name days and important days in the Czech Republic.",
   "keywords": [
@@ -22,6 +22,7 @@
     "build": "tsc",
     "ava": "NODE_OPTIONS='--import=tsx/esm' ava",
     "xo": "xo",
+    "release": "np --no-release-draft",
     "test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava"
   },
   "engines": {
@@ -33,14 +34,15 @@
     "dist/*"
   ],
   "dependencies": {
-    "easter-date": "0.0.5",
+    "easter-date": "0.0.7",
     "luxon": "^3.4.4",
-    "namedays-cs": "^0.0.3"
+    "namedays-cs": "^0.0.5"
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
     "@types/node": "^20.12.7",
     "ava": "^6.1.2",
+    "np": "^10.0.3",
     "tsx": "^4.7.2",
     "typescript": "^5.4.5",
     "xo": "^0.58.0"
