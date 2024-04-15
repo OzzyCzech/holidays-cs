@@ -1,7 +1,5 @@
-import {DateTime} from 'luxon';
-import data from './names.json' assert {type: 'json'};
-
-const names = data as Record<string, string[]>;
+import {type DateTime} from 'luxon';
+import * as NameDays from 'namedays-cs';
 
 /**
  * Get names as a string for the given date
@@ -9,8 +7,7 @@ const names = data as Record<string, string[]>;
  * @param joinWith
  */
 export function getNameDay(date: DateTime | Date, joinWith = ' a '): string {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return getNameDayArray(date)?.join(joinWith) ?? '';
+	return NameDays.getNameDay(date instanceof Date ? date : date.toJSDate(), joinWith);
 }
 
 /**
@@ -18,7 +15,5 @@ export function getNameDay(date: DateTime | Date, joinWith = ' a '): string {
  * @param date
  */
 export function getNameDayArray(date: DateTime | Date): string[] | undefined {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	const day = date.toFormat('ddMM');
-	return day in names ? names[day] : [];
+	return NameDays.getNameDayArray(date instanceof Date ? date : date.toJSDate());
 }
