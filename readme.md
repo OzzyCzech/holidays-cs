@@ -185,9 +185,10 @@ import {isSignificantDay, getSignificantDay} from 'holidays-cs';
 
 // 16. jan 2024
 isSignificantDay(DateTime.fromISO('2024-01-16')); // true
-getSignificantDay(DateTime.fromISO('2024-01-16')); // Den památky Jana Palacha (1969 – výročí Palachova upálení)
-
+getSignificantDay(DateTime.fromISO('2024-01-16')).name; // Den památky Jana Palacha
 ```
+
+Visit the [significant days](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek) page for more information.
 
 ## Credits
 
