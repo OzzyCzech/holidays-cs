@@ -13,7 +13,6 @@ test('Check if a date is mother\'s day', t => {
 	t.true(isMothersDay(DateTime.fromISO('2024-05-12')));
 	t.true(isMothersDay(DateTime.fromISO('2024-05-12').setLocale('cs')));
 
-
 	t.false(isMothersDay(DateTime.fromISO('2044-05-07')));
 	t.true(isMothersDay(DateTime.fromISO('2044-05-08')));
 	t.false(isMothersDay(DateTime.fromISO('2044-05-09')));
