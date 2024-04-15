@@ -159,7 +159,7 @@ areShopsOpen(DateTime.fromISO('2025-01-01')); // false
 getShopsStatus(DateTime.fromISO('2025-01-01')); // zavřeno
 ```
 
-## Father's and Mother's day
+## Father's and Mother's Day
 
 Father's Day is celebrated on the **third Sunday in June**.
 Mother's Day is celebrated on the **second Sunday in May**.
