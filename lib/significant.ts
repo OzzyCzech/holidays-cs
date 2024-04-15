@@ -4,11 +4,11 @@ import data from './significant.json' assert {type: 'json'};
 /**
  * Represents a significant day.
  */
-interface SignificantDay {
+export type SignificantDay = {
 	name: string;
 	description: string;
-	year: number | null;
-}
+	year?: number;
+};
 
 const significant = data as Record<string, SignificantDay>;
 

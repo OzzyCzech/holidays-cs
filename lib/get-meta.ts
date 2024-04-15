@@ -1,7 +1,7 @@
 import {DateTime} from 'luxon';
 import {getNameDayArray} from './names.js';
 import {getPublicHoliday, isPublicHoliday} from './holidays.js';
-import {getSignificantDay, isSignificantDay} from './significant.js';
+import {getSignificantDay, isSignificantDay, type SignificantDay} from './significant.js';
 import {areShopsOpen, getShopsStatus} from './shops.js';
 import {
 	getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek,
@@ -21,7 +21,7 @@ export type DayMetadata = {
 
 	// Significant days metadata
 	isSignificantDay: boolean;
-	significantDay?: string | undefined;
+	significantDay?: SignificantDay;
 
 	// Public holidays metadata
 	isPublicHoliday: boolean;

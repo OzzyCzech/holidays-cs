@@ -1,8 +1,7 @@
 {
   "0601": {
     "name": "Tři králové",
-    "description": "Tři králové přišli k Ježíši",
-    "year": null
+    "description": "Tři králové přišli k Ježíši"
   },
   "1601": {
     "name": "Den památky Jana Palacha",
@@ -31,7 +30,7 @@
   },
   "2803": {
     "name": "Den narození Jana Ámose Komenského",
-    "description": "Narození Jana Ámose Komenského 28. března 1592 v Uherském Brodě"
+    "description": "Narození Jana Ámose Komenského 28. března 1592 v Uherském Brodě",
     "year": 1592
   },
   "0704": {
@@ -91,8 +90,7 @@
   },
   "0211": {
     "name": "Památka zesnulých",
-    "description": "Dušičky",
-    "year": null
+    "description": "Dušičky"
   },
   "1111": {
     "name": "Den válečných veteránů",
