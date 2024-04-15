@@ -1,22 +1,102 @@
 {
-  "0601": "Tři králové",
-  "1601": "Den památky Jana Palacha (1969 – výročí Palachova upálení)",
-  "2701": "Den památky obětí holocaustu a předcházení zločinům proti lidskosti (1945 – osvobození nacistického koncentračního a vyhlazovacího tábora Auschwitz-Birkenau)",
-  "0803": "Mezinárodní den žen (1911)",
-  "0903": "Den památky obětí vyhlazení terezínského rodinného tábora v Osvětimi-Březince (1944)",
-  "1203": "Den přístupu České republiky k Severoatlantické smlouvě (NATO) (1999)",
-  "2803": "Den narození Jana Ámose Komenského (1592)",
-  "0704": "Den vzdělanosti (1348 – založení Univerzity Karlovy)",
-  "0505": "Květnové povstání českého lidu (1945)",
-  "1505": "Den rodin (Mezinárodní den rodiny slavený od roku 1994)",
-  "2705": "Den národního vzdoru (1942 – ozbrojený útok čs. parašutistů na zastupujícího říšského protektora Reinharda Heydricha)",
-  "0106": "Den dětí (Mezinárodní den dětí slavený od roku 1950)",
-  "1006": "Den památky obětí vyhlazení obce Lidice (1942)",
-  "1806": "Den hrdinů druhého odboje (1942 – boj v kostele svatých Cyrila a Metoděje)",
-  "2506": "Den odchodu okupačních vojsk (1991 – odchod posledního sovětského vojáka z ČSFR)",
-  "2706": "Den památky obětí komunistického režimu (1950 – poprava Milady Horákové)",
-  "2108": "Den památky obětí invaze a následné okupace vojsky Varšavské smlouvy (1968)",
-  "0810": "Památný den sokolstva (1941 – rozpuštění Československé obce sokolské výnosem zastupujícího říšského protektora Reinharda Heydricha)",
-  "0211": "Památka zesnulých (Dušičky)",
-  "1111": "Den válečných veteránů (1918 – konec první světové války)"
+  "0601": {
+    "name": "Tři králové",
+    "description": "Tři králové přišli k Ježíši",
+    "year": null
+  },
+  "1601": {
+    "name": "Den památky Jana Palacha",
+    "description": "Výročí Palachova upálení",
+    "year": 1969
+  },
+  "2701": {
+    "name": "Den památky obětí holocaustu a předcházení zločinům proti lidskosti",
+    "description": "Osvobození nacistického koncentračního a vyhlazovacího tábora Auschwitz-Birkenau",
+    "year": 1945
+  },
+  "0803": {
+    "name": "Mezinárodní den žen",
+    "description": "Mezinárodní den žen slavený od roku 1911",
+    "year": 1911
+  },
+  "0903": {
+    "name": "Den památky obětí vyhlazení terezínského rodinného tábora v Osvětimi-Březince",
+    "description": "",
+    "year": 1944
+  },
+  "1203": {
+    "name": "Den přístupu České republiky k Severoatlantické smlouvě",
+    "description": "Členství v NATO od 12. března 1999",
+    "year": 1999
+  },
+  "2803": {
+    "name": "Den narození Jana Ámose Komenského",
+    "description": "Narození Jana Ámose Komenského 28. března 1592 v Uherském Brodě"
+    "year": 1592
+  },
+  "0704": {
+    "name": "Den vzdělanosti",
+    "description": "Založení Univerzity Karlovy",
+    "year": 1348
+  },
+  "0505": {
+    "name": "Květnové povstání českého lidu",
+    "description": "Povstání proti nacistické okupaci",
+    "year": 1945
+  },
+  "1505": {
+    "name": "Den rodin",
+    "description": "Mezinárodní den rodiny slavený od roku 1994",
+    "year": 1994
+  },
+  "2705": {
+    "name": "Den národního vzdoru",
+    "description": "Ozbrojený útok čs. parašutistů na zastupujícího říšského protektora Reinharda Heydricha",
+    "year": 1942
+  },
+  "0106": {
+    "name": "Den dětí",
+    "description": "Mezinárodní den dětí slavený od roku 1950",
+    "year": 1950
+  },
+  "1006": {
+    "name": "Den památky obětí vyhlazení obce Lidice",
+    "description": "Dne 10. června 1942 byla Lidice vyhlazena nacisty",
+    "year": 1942
+  },
+  "1806": {
+    "name": "Den hrdinů druhého odboje",
+    "description": "Boj v kostele svatých Cyrila a Metoděje",
+    "year": 1942
+  },
+  "2506": {
+    "name": "Den odchodu okupačních vojsk",
+    "description": "Odchod posledního sovětského vojáka z ČSFR",
+    "year": 1991
+  },
+  "2706": {
+    "name": "Den památky obětí komunistického režimu",
+    "description": "Poprava Milady Horákové",
+    "year": 1950
+  },
+  "2108": {
+    "name": "Den památky obětí invaze a následné okupace vojsky Varšavské smlouvy",
+    "description": "Okupace Československa vojsky Varšavské smlouvy",
+    "year": 1968
+  },
+  "0810": {
+    "name": "Památný den sokolstva",
+    "description": "Rozpuštění Československé obce sokolské výnosem zastupujícího říšského protektora Reinharda Heydricha",
+    "year": 1941
+  },
+  "0211": {
+    "name": "Památka zesnulých",
+    "description": "Dušičky",
+    "year": null
+  },
+  "1111": {
+    "name": "Den válečných veteránů",
+    "description": "Konec první světové války",
+    "year": 1918
+  }
 }

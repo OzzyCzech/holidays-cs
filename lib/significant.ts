@@ -1,13 +1,22 @@
 import {DateTime} from 'luxon';
 import data from './significant.json' assert {type: 'json'};
 
-const significant = data as Record<string, string>;
+/**
+ * Represents a significant day.
+ */
+interface SignificantDay {
+	name: string;
+	description: string;
+	year: number | null;
+}
+
+const significant = data as Record<string, SignificantDay>;
 
 /**
  * Returns the significant day for the given date.
  * @param date
  */
-export function getSignificantDay(date: DateTime | Date): string | undefined {
+export function getSignificantDay(date: DateTime | Date): SignificantDay | undefined {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	return significant[date.toFormat('ddMM')];
 }

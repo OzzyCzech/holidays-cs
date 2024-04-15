@@ -177,6 +177,18 @@ isMothersDay(DateTime.fromISO('2024-05-12')); // true
 getMothersDay(2024).toISODate(); // 2024-05-12
 ```
 
+## Czech significant days
+
+```javascript
+import {DateTime} from 'luxon';
+import {isSignificantDay, getSignificantDay} from 'holidays-cs';
+
+// 16. jan 2024
+isSignificantDay(DateTime.fromISO('2024-01-16')); // true
+getSignificantDay(DateTime.fromISO('2024-01-16')); // Den památky Jana Palacha (1969 – výročí Palachova upálení)
+
+```
+
 ## Credits
 
 - [date-holidays](https://github.com/commenthol/date-holidays) library for inspiration
