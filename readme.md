@@ -53,6 +53,8 @@ getEaster(2024).toISODate(); // 2024-03-31
 getEaster(2025).toISODate(); // 2025-04-20
 ```
 
+Need mor? Check out the [Easter Date](https://github.com/OzzyCzech/easter-date) library.
+
 ### Easter days
 
 ```javascript
