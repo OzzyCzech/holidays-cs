@@ -3527,10 +3527,10 @@ mute-stream@1.0.0:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-1.0.0.tgz#e31bd9fe62f0aed23520aa4324ea6671531e013e"
   integrity sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==
 
-namedays-cs@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/namedays-cs/-/namedays-cs-0.0.5.tgz#426bf6271952153e8b9a6300d0e642766da973f7"
-  integrity sha512-FE35a+3tWwwtssv5tmD3+dmbUbz4zoeImxbxsPvizUFJmvfPtwiVQ0UGeZ/PrbgSAbMsMCez2J5bdIBYgAgScA==
+namedays-cs@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/namedays-cs/-/namedays-cs-0.0.6.tgz#eb61518a8fd0dc465a08821f3d0951a18805e8ff"
+  integrity sha512-/Zt/7TVYOXgVFIm9btdafaJ8hqXA3C4+eyiLJxVCA203I3sgZgeeIVY/Dk2cjMrfbov0LvoOyE2gGJlybbC0Rw==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -3598,10 +3598,10 @@ normalize-url@^8.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-8.0.1.tgz#9b7d96af9836577c58f5883e939365fa15623a4a"
   integrity sha512-IO9QvjUMWxPQQhs60oOu10CRkWCiZzSUkzbXGGV9pviYl1fXYcvkzQ5jV9z8Y6un8ARoVRl4EtC6v6jNqbaJ/w==
 
-np@^10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/np/-/np-10.0.3.tgz#777e0e52fcc874949d28fff3cbdb54b9fffd4066"
-  integrity sha512-JioZkOd7DtT1nkGnVOUrPfD7P3SlNbjsT2dHxMDsxpZcpd44iP4J4Nn9OTjCAhf9LK4EezTcIfU7QadyupEvxg==
+np@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/np/-/np-10.0.5.tgz#575c056b54534534ccbc978e6699d8bfcd4740c4"
+  integrity sha512-Tu270vVvsh92uh6XDXrGS6D94PhzxQYqM8uUxftYVp0B8qXl78dJRYwQ9wfYMOBB9ynlF79eWlUtPUxPzKGddQ==
   dependencies:
     chalk "^5.3.0"
     chalk-template "^1.1.0"
