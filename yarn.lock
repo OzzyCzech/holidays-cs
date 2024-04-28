@@ -1418,10 +1418,10 @@ eastasianwidth@^0.2.0:
   resolved "https://registry.yarnpkg.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
-easter-date@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.8.tgz#561fb4755272b974491276e71dbc2d2f9188e420"
-  integrity sha512-rH0+RBTmcISmP+cH1Ar3rfpFogiLjNpUMYvN/0Kban1vUjh6YewXsH5OexY9x06WpxLGkeAhO0yFkJQ+DToNjg==
+easter-date@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.9.tgz#1dda410cc19de897eb9d37130b1e743252df5cb7"
+  integrity sha512-CpaNMUqZGw1DJRzA1zvAdpC7qtO1qbIvSalppvloklQjWs5NlWBb3p3n1i68VZMRwZQxuwx1MmbM3ngG4Dkuiw==
 
 electron-to-chromium@^1.4.668:
   version "1.4.733"
