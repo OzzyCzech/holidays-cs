@@ -34,7 +34,7 @@
     "dist/*"
   ],
   "dependencies": {
-    "easter-date": "0.0.7",
+    "easter-date": "0.0.8",
     "luxon": "^3.4.4"
   },
   "devDependencies": {
