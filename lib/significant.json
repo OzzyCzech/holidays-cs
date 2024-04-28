@@ -1,8 +1,4 @@
 {
-  "0601": {
-    "name": "Tři králové",
-    "description": "Tři králové přišli k Ježíši"
-  },
   "1601": {
     "name": "Den památky Jana Palacha",
     "description": "Výročí upálení Jana Palacha",
@@ -20,7 +16,7 @@
   },
   "0903": {
     "name": "Den památky obětí vyhlazení terezínského rodinného tábora v Osvětimi-Březince",
-    "description": "",
+    "description": "Vyhlazení terezínského rodinného tábora v Osvětimi-Březince",
     "year": 1944
   },
   "1203": {
@@ -53,11 +49,6 @@
     "description": "Ozbrojený útok čs. parašutistů na zastupujícího říšského protektora Reinharda Heydricha",
     "year": 1942
   },
-  "0106": {
-    "name": "Den dětí",
-    "description": "Mezinárodní den dětí slavený od roku 1950",
-    "year": 1950
-  },
   "1006": {
     "name": "Den památky obětí vyhlazení obce Lidice",
     "description": "Dne 10. června 1942 byla Lidice vyhlazena nacisty",
@@ -87,10 +78,6 @@
     "name": "Památný den sokolstva",
     "description": "Rozpuštění Československé obce sokolské výnosem zastupujícího říšského protektora Reinharda Heydricha",
     "year": 1941
-  },
-  "0211": {
-    "name": "Památka zesnulých",
-    "description": "Dušičky"
   },
   "1111": {
     "name": "Den válečných veteránů",

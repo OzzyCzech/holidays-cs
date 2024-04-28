@@ -2,11 +2,12 @@ import test from 'ava';
 import {DateTime} from 'luxon';
 import {getSignificantDay, isSignificantDay} from '../lib/index.js';
 
-test('Check Tří králové day', t => {
-	t.true(isSignificantDay(DateTime.fromISO('2020-01-06')));
-	t.deepEqual(getSignificantDay(DateTime.fromISO('2020-01-06')),
+test('Check Den odchodu okupačních vojsk', t => {
+	t.true(isSignificantDay(DateTime.fromISO('2024-06-25')));
+	t.deepEqual(getSignificantDay(DateTime.fromISO('2024-06-25')),
 		{
-			'name': 'Tři králové',
-			'description': 'Tři králové přišli k Ježíši',
+			'name': 'Den odchodu okupačních vojsk',
+			'description': 'Odchod posledního sovětského vojáka z ČSFR',
+			'year': 1991,
 		});
 });
