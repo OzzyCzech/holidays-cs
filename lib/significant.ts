@@ -10,6 +10,9 @@ export type SignificantDay = {
 	year?: number;
 };
 
+/**
+ * Zákon č. 245/2000 Sb., o státních svátcích a národních svátcích České republiky
+ */
 const significant = data as Record<string, SignificantDay>;
 
 /**

@@ -178,11 +178,7 @@ getMothersDay(2024).toISODate(); // 2024-05-12
 
 ## Credits
 
-- [Public holidays and significant days](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek)
-- [date-holidays](https://github.com/commenthol/date-holidays) library for inspiration
-- [Online calendar](https://calendar.center/) for verifying the data
-- [Easter dates calculation](https://github.com/paulzag/ZagZ-iCalendars) for the Easter dates
-- [Svatý týden](https://cs.wikipedia.org/wiki/Svat%C3%BD_t%C3%BDden) for names of the Easter days
+- [Zákon č. 245/2000 Sb., o státních svátcích a národních svátcích České republiky](https://www.mpsv.cz/web/cz/zakon-c.-245-2000-sb.-ze-dne-29.-cervna-2000-)
 
 ## License
 
