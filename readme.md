@@ -6,7 +6,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/OzzyCzech/holidays-cs?style=for-the-badge)](https://github.com/OzzyCzech/holidays-cs/commits/main)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/OzzyCzech/holidays-cs/main.yml?style=for-the-badge)](https://github.com/OzzyCzech/holidays-cs/actions)
 
-Public holidays, Easter, name days and important days in the Czech Republic.
+Public holidays and significant days in the Czech Republic.
 
 ## Functions
 
@@ -21,25 +21,68 @@ You can pass a `Date` object or a `DateTime` object to the functions.
 Responses are always `DateTime` objects. If you need a `Date` object,
 you can use the `response.toJSDate()` method.
 
-## Name days
-
-You can get the name day for a given date:
+## Czech public holidays
 
 ```javascript
 import {DateTime} from 'luxon';
-import {getNameDay, getNameDayArray} from 'holidays-cs';
+import {isPublicHoliday, getPublicHoliday} from 'holidays-cs';
 
-// String of name days
-getNameDay(DateTime.fromISO('2024-12-24')); // Adam a Eva
-getNameDay(DateTime.fromISO('2024-12-24'), ', '); // Adam, Eva
+// 1. january
+isPublicHoliday(DateTime.fromISO('2024-01-01')); // true
 
-// Array of name days
-getNameDayArray(DateTime.fromISO('2024-12-24')); // ['Adam', 'Eva']
+// 2. january
+isPublicHoliday(DateTime.fromISO('2024-01-02')); // false
+
+// 17. november
+isPublicHoliday(DateTime.fromISO('2024-11-17')); // true
+getPublicHoliday(DateTime.fromISO('2024-11-17')); // Den boje za svobodu a demokracii (1939 a 1989)
 ```
+
+You can get all public holidays for a given year:
+
+```javascript
+import {getPublicHolidaysList} from 'holidays-cs';
+
+getPublicHolidaysList(2024); // returns Map with all 13 holidays
+```
+
+### Shops status
+
+In the Czech Republic, shops are closed on some public holidays.
+
+```javascript
+import {DateTime} from 'luxon';
+import {areShopsOpen, getShopsStatus} from 'holidays-cs';
+
+// 24. december 2024
+areShopsOpen(DateTime.fromISO('2024-12-24')); // true
+
+// 25. december 2024
+getShopsStatus(DateTime.fromISO('2024-12-25')); // otevřeno do 12:00 
+
+// New Year's Day 2025
+areShopsOpen(DateTime.fromISO('2025-01-01')); // false
+getShopsStatus(DateTime.fromISO('2025-01-01')); // zavřeno
+```
+
+## Czech significant days
+
+Significant days are not public holidays, but they are important in the Czech Republic.
+
+```javascript
+import {DateTime} from 'luxon';
+import {isSignificantDay, getSignificantDay} from 'holidays-cs';
+
+// 16. jan 2024
+isSignificantDay(DateTime.fromISO('2024-01-16')); // true
+getSignificantDay(DateTime.fromISO('2024-01-16')).name; // Den památky Jana Palacha
+```
+
+Visit the [significant days](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek) page for more information.
 
 ## Easter
 
-**Easter Monday** (Velikonoční pondělí) and **Good Friday** (Velký pátek)
+**Easter Monday** (_Velikonoční pondělí_) and **Good Friday** (_Velký pátek_)
 are public holidays in the Czech Republic.
 
 ### Easter date
@@ -115,50 +158,6 @@ import {getEasterDayName} from 'holidays-cs';
 getEasterDayName(DateTime.fromISO('2024-03-29')); // Velký pátek
 ```
 
-## Czech public holidays
-
-```javascript
-import {DateTime} from 'luxon';
-import {isPublicHoliday, getPublicHoliday} from 'holidays-cs';
-
-// 1. january
-isPublicHoliday(DateTime.fromISO('2024-01-01')); // true
-
-// 2. january
-isPublicHoliday(DateTime.fromISO('2024-01-02')); // false
-
-// 17. november
-isPublicHoliday(DateTime.fromISO('2024-11-17')); // true
-getPublicHoliday(DateTime.fromISO('2024-11-17')); // Den boje za svobodu a demokracii (1939 a 1989)
-```
-
-You can get all public holidays for a given year:
-
-```javascript
-import {getPublicHolidaysList} from 'holidays-cs';
-
-getPublicHolidaysList(2024); // returns Map with all 13 holidays
-```
-
-### Shops status
-
-In the Czech Republic, shops are closed on some public holidays.
-
-```javascript
-import {DateTime} from 'luxon';
-import {areShopsOpen, getShopsStatus} from 'holidays-cs';
-
-// 24. december 2024
-areShopsOpen(DateTime.fromISO('2024-12-24')); // true
-
-// 25. december 2024
-getShopsStatus(DateTime.fromISO('2024-12-25')); // otevřeno do 12:00 
-
-// New Year's Day 2025
-areShopsOpen(DateTime.fromISO('2025-01-01')); // false
-getShopsStatus(DateTime.fromISO('2025-01-01')); // zavřeno
-```
-
 ## Father's and Mother's Day
 
 Father's Day is celebrated on the **third Sunday in June**.
@@ -177,21 +176,9 @@ isMothersDay(DateTime.fromISO('2024-05-12')); // true
 getMothersDay(2024).toISODate(); // 2024-05-12
 ```
 
-## Czech significant days
-
-```javascript
-import {DateTime} from 'luxon';
-import {isSignificantDay, getSignificantDay} from 'holidays-cs';
-
-// 16. jan 2024
-isSignificantDay(DateTime.fromISO('2024-01-16')); // true
-getSignificantDay(DateTime.fromISO('2024-01-16')).name; // Den památky Jana Palacha
-```
-
-Visit the [significant days](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek) page for more information.
-
 ## Credits
 
+- [Public holidays and significant days](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_st%C3%A1tn%C3%AD_sv%C3%A1tek)
 - [date-holidays](https://github.com/commenthol/date-holidays) library for inspiration
 - [Online calendar](https://calendar.center/) for verifying the data
 - [Easter dates calculation](https://github.com/paulzag/ZagZ-iCalendars) for the Easter dates
