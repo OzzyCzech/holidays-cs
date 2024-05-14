@@ -158,24 +158,6 @@ import {getEasterDayName} from 'holidays-cs';
 getEasterDayName(DateTime.fromISO('2024-03-29')); // Velký pátek
 ```
 
-## Father's and Mother's Day
-
-Father's Day is celebrated on the **third Sunday in June**.
-Mother's Day is celebrated on the **second Sunday in May**.
-
-```javascript
-import {DateTime} from 'luxon';
-import {isFathersDay, getFathersDay, isMothersDay, getMothersDay} from 'holidays-cs';
-
-// 16. june 2024
-isFathersDay(DateTime.fromISO('2024-06-16')); // true
-getFathersDay(2024).toISODate(); // 2024-06-16
-
-// 12. may 2024
-isMothersDay(DateTime.fromISO('2024-05-12')); // true
-getMothersDay(2024).toISODate(); // 2024-05-12
-```
-
 ## Credits
 
 - [Zákon č. 245/2000 Sb., o státních svátcích a národních svátcích České republiky](https://www.mpsv.cz/web/cz/zakon-c.-245-2000-sb.-ze-dne-29.-cervna-2000-)
