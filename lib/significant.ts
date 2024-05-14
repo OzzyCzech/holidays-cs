@@ -1,5 +1,5 @@
 import {DateTime} from 'luxon';
-import data from './significant.json';
+import data from './significant.json' with { type: 'json' };
 
 /**
  * Represents a significant day.
