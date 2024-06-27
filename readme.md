@@ -158,6 +158,53 @@ import {getEasterDayName} from 'holidays-cs';
 getEasterDayName(DateTime.fromISO('2024-03-29')); // Velký pátek
 ```
 
+### Get day metadata
+
+You can get metadata for a given date:
+
+```javascript
+import {DateTime} from 'luxon';
+import {getDayMeta} from 'holidays-cs';
+
+const meta = getDayMeta(DateTime.fromISO('2024-05-15'));
+meta.isPublicHoliday; // false ...
+```
+
+The metadata object looks like this:
+
+```typescript
+export type SignificantDay = {
+  name: string;
+  description: string;
+  year?: number;
+};
+
+export type EasterMetadata = {
+  name: string | undefined;
+  isGoodFriday: boolean;
+  isHolySaturday: boolean;
+  ieEasterSunday: boolean;
+  isEasterMonday: boolean;
+};
+
+export type DayMetadata = {
+  // Significant days metadata
+  isSignificantDay: boolean;
+  significantDay?: SignificantDay;
+
+  // Public holidays metadata
+  isPublicHoliday: boolean;
+  publicHoliday?: string | undefined;
+
+  // Easter metadata
+  isHolyWeek: boolean;
+  easter?: EasterMetadata | undefined;
+
+  // Shops metadata
+  shops: {areOpen: boolean; status: string};
+};
+```
+
 ## Credits
 
 - [Zákon č. 245/2000 Sb., o státních svátcích a národních svátcích České republiky](https://www.mpsv.cz/web/cz/zakon-c.-245-2000-sb.-ze-dne-29.-cervna-2000-)
