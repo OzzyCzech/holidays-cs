@@ -164,4 +164,4 @@ getEasterDayName(DateTime.fromISO('2024-03-29')); // Velký pátek
 
 ## License
 
-MIT
+[MIT](./LICENSE)
