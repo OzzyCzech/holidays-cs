@@ -158,7 +158,7 @@ import {getEasterDayName} from 'holidays-cs';
 getEasterDayName(DateTime.fromISO('2024-03-29')); // Velký pátek
 ```
 
-### Get day metadata
+## Get day metadata
 
 You can get metadata for a given date:
 
