@@ -34,12 +34,12 @@
     "dist/*"
   ],
   "dependencies": {
-    "easter-date": "0.0.16",
+    "easter-date": "0.0.17",
     "luxon": "^3.5.0"
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.7.0",
     "ava": "^6.1.2",
     "np": "^10.0.7",
     "tsx": "^4.19.1",

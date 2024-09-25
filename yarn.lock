@@ -385,10 +385,10 @@
   resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.4.2.tgz#e4fc7214a420173cea47739c33cdf10874694db7"
   integrity sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==
 
-"@types/node@^22.5.5":
-  version "22.5.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.5.tgz#52f939dd0f65fc552a4ad0b392f3c466cc5d7a44"
-  integrity sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==
+"@types/node@^22.7.0":
+  version "22.7.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.7.0.tgz#670aa1874bc836863e5c116f9f2c32416ff27e1f"
+  integrity sha512-MOdOibwBs6KW1vfqz2uKMlxq5xAfAZ98SZjO8e3XnAbFnTJtAspqhWk7hrdSAs9/Y14ZWMiy7/MxMUzAOadYEw==
   dependencies:
     undici-types "~6.19.2"
 
@@ -1455,10 +1455,10 @@ eastasianwidth@^0.2.0:
   resolved "https://registry.yarnpkg.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
-easter-date@0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.16.tgz#afe3a9819dc1ded6faebc73accfa9da1c476fbc9"
-  integrity sha512-kuX5FJNE0MuF+eA/YXB2OG7bVH0nUKk67y8xy0NVdUMIWL5C9M6Lz3kLBtK/BW+4kKhMNcbt3kt/lA4dpFv2SA==
+easter-date@0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.17.tgz#c92301b12448445607ab5921c2a42a53b62dd979"
+  integrity sha512-JDNnX40jtZltEfJb/l7QL/BenJtTCIDX9MyTAI4xx91F9FJRfJm+qBPP46WWmueKhskvwrRClpaZ67bYH1sYyw==
 
 electron-to-chromium@^1.4.668:
   version "1.4.733"
