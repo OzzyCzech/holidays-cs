@@ -20,11 +20,12 @@
 	},
 	"scripts": {
 		"build": "rm -rf dist && tsc",
-		"release": "np",
 		"prepare": "npm run build",
+		"test": "tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
+		"ava": "NODE_OPTIONS='--import=tsx/esm' ava",
 		"format": "biome format --write",
-		"test": "biome ci && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
-		"ava": "NODE_OPTIONS='--import=tsx/esm' ava"
+		"lint": "biome lint",
+		"release": "np"
 	},
 	"engines": {
 		"node": ">=20"
