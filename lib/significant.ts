@@ -1,5 +1,5 @@
-import {DateTime} from 'luxon';
-import data from './significant.json' with { type: 'json' };
+import { DateTime } from "luxon";
+import data from "./significant.json" with { type: "json" };
 
 /**
  * Represents a significant day.
@@ -19,9 +19,11 @@ const significant = data as Record<string, SignificantDay>;
  * Returns the significant day for the given date.
  * @param date
  */
-export function getSignificantDay(date: DateTime | Date): SignificantDay | undefined {
+export function getSignificantDay(
+	date: DateTime | Date,
+): SignificantDay | undefined {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return significant[date.toFormat('ddMM')];
+	return significant[date.toFormat("ddMM")];
 }
 
 /**
@@ -30,5 +32,5 @@ export function getSignificantDay(date: DateTime | Date): SignificantDay | undef
  */
 export function isSignificantDay(date: DateTime | Date): boolean {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return date.toFormat('ddMM') in significant;
+	return date.toFormat("ddMM") in significant;
 }

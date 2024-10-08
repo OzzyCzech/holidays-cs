@@ -1,5 +1,5 @@
-import {DateTime, Interval} from 'luxon';
-import * as EasterDate from 'easter-date';
+import * as EasterDate from "easter-date";
+import { DateTime, Interval } from "luxon";
 
 /**
  * Returns the date of Easter Monday for a given year.
@@ -14,7 +14,9 @@ export function getEasterMonday(year: number): DateTime {
  * @param date
  */
 export function isEasterMonday(date: DateTime | Date): boolean {
-	return EasterDate.isEasterMonday(date instanceof Date ? date : date.toJSDate());
+	return EasterDate.isEasterMonday(
+		date instanceof Date ? date : date.toJSDate(),
+	);
 }
 
 /**
@@ -39,7 +41,9 @@ export function getEasterSunday(year: number): DateTime {
  * @param date
  */
 export function isEasterSunday(date: DateTime | Date): boolean {
-	return EasterDate.isEasterSunday(date instanceof Date ? date : date.toJSDate());
+	return EasterDate.isEasterSunday(
+		date instanceof Date ? date : date.toJSDate(),
+	);
 }
 
 /**
@@ -55,7 +59,9 @@ export function getHolySaturday(year: number): DateTime {
  * @param date
  */
 export function isHolySaturday(date: DateTime | Date): boolean {
-	return EasterDate.isHolySaturday(date instanceof Date ? date : date.toJSDate());
+	return EasterDate.isHolySaturday(
+		date instanceof Date ? date : date.toJSDate(),
+	);
 }
 
 /**
@@ -83,8 +89,8 @@ export function getHollyWeekInterval(year: number): Interval {
 	const easter = getEaster(year);
 
 	return Interval.fromDateTimes(
-		easter.minus({days: 7}), // Palm Sunday
-		easter.plus({days: 1}), // Easter Monday
+		easter.minus({ days: 7 }), // Palm Sunday
+		easter.plus({ days: 1 }), // Easter Monday
 	);
 }
 
@@ -99,22 +105,24 @@ export function isHolyWeek(date: DateTime | Date): boolean {
 		return false;
 	}
 
-	return interval.start && interval.end ? interval.start <= date && date <= interval.end : false;
+	return interval.start && interval.end
+		? interval.start <= date && date <= interval.end
+		: false;
 }
 
 /**
  * Names of the days in Holy Week.
  */
 const names: Record<string, string> = {
-	'-7': 'Květná neděle',
-	'-6': 'Modré pondělí',
-	'-5': 'Šedivé úterý',
-	'-4': 'Škaredá středa',
-	'-3': 'Zelený čtvrtek',
-	'-2': 'Velký pátek',
-	'-1': 'Bílá sobota',
-	'0': 'Velikonoční neděle',
-	'1': 'Velikonoční pondělí',
+	"-7": "Květná neděle",
+	"-6": "Modré pondělí",
+	"-5": "Šedivé úterý",
+	"-4": "Škaredá středa",
+	"-3": "Zelený čtvrtek",
+	"-2": "Velký pátek",
+	"-1": "Bílá sobota",
+	"0": "Velikonoční neděle",
+	"1": "Velikonoční pondělí",
 };
 
 /**
@@ -124,7 +132,7 @@ const names: Record<string, string> = {
 export function getEasterDayName(date: DateTime | Date): string | undefined {
 	if (isHolyWeek(date)) {
 		date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-		const index = date.diff(getEaster(date.year), 'days').as('days');
+		const index = date.diff(getEaster(date.year), "days").as("days");
 		return index in names ? names[index] : undefined;
 	}
 
