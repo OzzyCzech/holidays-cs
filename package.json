@@ -32,9 +32,7 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist/*"
-	],
+	"files": ["dist/*"],
 	"dependencies": {
 		"easter-date": "0.0.19",
 		"luxon": "^3.5.0"
@@ -53,13 +51,8 @@
 		"extensions": {
 			"ts": "module"
 		},
-		"files": [
-			"test/*"
-		],
+		"files": ["test/*"],
 		"workerThreads": false,
-		"nodeArguments": [
-			"--experimental-json-modules",
-			"--no-warnings"
-		]
+		"nodeArguments": ["--experimental-json-modules", "--no-warnings"]
 	}
 }
