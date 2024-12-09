@@ -32,27 +32,34 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist/*"],
+	"files": [
+		"dist/*"
+	],
 	"dependencies": {
-		"easter-date": "0.0.19",
+		"easter-date": "0.0.20",
 		"luxon": "^3.5.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/luxon": "^3.4.2",
-		"@types/node": "^22.7.9",
-		"ava": "^6.1.2",
-		"np": "^10.0.7",
-		"tsx": "^4.19.1",
-		"typescript": "^5.6.3"
+		"@types/node": "^22.10.1",
+		"ava": "^6.2.0",
+		"np": "^10.1.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2"
 	},
 	"ava": {
 		"timeout": "1m",
 		"extensions": {
 			"ts": "module"
 		},
-		"files": ["test/*"],
+		"files": [
+			"test/*"
+		],
 		"workerThreads": false,
-		"nodeArguments": ["--experimental-json-modules", "--no-warnings"]
+		"nodeArguments": [
+			"--experimental-json-modules",
+			"--no-warnings"
+		]
 	}
 }
