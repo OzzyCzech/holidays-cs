@@ -1,11 +1,5 @@
 import { DateTime } from "luxon";
-import {
-	getEasterDayName,
-	getEasterMonday,
-	getGoodFriday,
-	isEasterMonday,
-	isGoodFriday,
-} from "./easter.js";
+import { getEasterDayName, getEasterMonday, getGoodFriday, isEasterMonday, isGoodFriday } from "./easter.js";
 
 /**
  * Zákon č. 245/2000 Sb., o státních svátcích a národních svátcích České republiky
@@ -30,11 +24,7 @@ const holidays: Record<string, string> = {
  */
 export function isPublicHoliday(date: DateTime | Date): boolean {
 	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
-	return (
-		isEasterMonday(date) ||
-		isGoodFriday(date) ||
-		date.toFormat("ddMM") in holidays
-	);
+	return isEasterMonday(date) || isGoodFriday(date) || date.toFormat("ddMM") in holidays;
 }
 
 /**
@@ -73,10 +63,7 @@ export function getPublicHolidaysList(year: number): Map<string, string> {
 	list.set(goodFriday.toISODate() ?? "", getEasterDayName(goodFriday) ?? "");
 
 	const easterMonday = getEasterMonday(year);
-	list.set(
-		easterMonday.toISODate() ?? "",
-		getEasterDayName(easterMonday) ?? "",
-	);
+	list.set(easterMonday.toISODate() ?? "", getEasterDayName(easterMonday) ?? "");
 
 	return list;
 }

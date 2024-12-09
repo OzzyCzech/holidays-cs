@@ -14,9 +14,7 @@ export function getEasterMonday(year: number): DateTime {
  * @param date
  */
 export function isEasterMonday(date: DateTime | Date): boolean {
-	return EasterDate.isEasterMonday(
-		date instanceof Date ? date : date.toJSDate(),
-	);
+	return EasterDate.isEasterMonday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -41,9 +39,7 @@ export function getEasterSunday(year: number): DateTime {
  * @param date
  */
 export function isEasterSunday(date: DateTime | Date): boolean {
-	return EasterDate.isEasterSunday(
-		date instanceof Date ? date : date.toJSDate(),
-	);
+	return EasterDate.isEasterSunday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -59,9 +55,7 @@ export function getHolySaturday(year: number): DateTime {
  * @param date
  */
 export function isHolySaturday(date: DateTime | Date): boolean {
-	return EasterDate.isHolySaturday(
-		date instanceof Date ? date : date.toJSDate(),
-	);
+	return EasterDate.isHolySaturday(date instanceof Date ? date : date.toJSDate());
 }
 
 /**
@@ -105,9 +99,7 @@ export function isHolyWeek(date: DateTime | Date): boolean {
 		return false;
 	}
 
-	return interval.start && interval.end
-		? interval.start <= date && date <= interval.end
-		: false;
+	return interval.start && interval.end ? interval.start <= date && date <= interval.end : false;
 }
 
 /**

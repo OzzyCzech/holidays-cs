@@ -1,19 +1,8 @@
 import { DateTime } from "luxon";
-import {
-	getEasterDayName,
-	isEasterMonday,
-	isEasterSunday,
-	isGoodFriday,
-	isHolySaturday,
-	isHolyWeek,
-} from "./easter.js";
+import { getEasterDayName, isEasterMonday, isEasterSunday, isGoodFriday, isHolySaturday, isHolyWeek } from "./easter.js";
 import { getPublicHoliday, isPublicHoliday } from "./holidays.js";
 import { areShopsOpen, getShopsStatus } from "./shops.js";
-import {
-	type SignificantDay,
-	getSignificantDay,
-	isSignificantDay,
-} from "./significant.js";
+import { type SignificantDay, getSignificantDay, isSignificantDay } from "./significant.js";
 
 export type EasterMetadata = {
 	name: string | undefined;

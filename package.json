@@ -32,8 +32,7 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist/*"
+	"files": ["dist/*"
 	],
 	"dependencies": {
 		"easter-date": "0.0.20",
