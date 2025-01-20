@@ -32,7 +32,8 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist/*"
+	"files": [
+		"dist/*"
 	],
 	"dependencies": {
 		"easter-date": "0.0.20",
@@ -41,11 +42,11 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/luxon": "^3.4.2",
-		"@types/node": "^22.10.1",
+		"@types/node": "^22.10.7",
 		"ava": "^6.2.0",
 		"np": "^10.1.0",
 		"tsx": "^4.19.2",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.3"
 	},
 	"ava": {
 		"timeout": "1m",
