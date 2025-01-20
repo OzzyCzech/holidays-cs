@@ -1018,10 +1018,10 @@ dot-prop@^9.0.0:
   dependencies:
     type-fest "^4.18.2"
 
-easter-date@0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.20.tgz#0eb6a91957a99775c85a6b375a9e73a37c7e8579"
-  integrity sha512-TrwXiUZaTo5SHN9FlFRZWBdRydo0bZ1mYYCCSS869ZLEUaTKmMYRj5JvMatNsREeNhu/BRLD6f5lNRUfZzxZnA==
+easter-date@0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-0.0.21.tgz#799e8b45c2a046998322f7464d91ef2b95e2cbb3"
+  integrity sha512-hTQczqRXwH9Wmo0VlE89De5E6K3zmAPI7PeB02Di6YjzkyPXHqXY+BHMZHiypHOXHjWtt2Z8cTc+BLAHg7jOBQ==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
