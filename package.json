@@ -36,15 +36,15 @@
 	],
 	"dependencies": {
 		"easter-date": "0.0.21",
-		"luxon": "^3.5.0",
-		"vitest": "^3.0.2"
+		"luxon": "^3.6.0",
+		"vitest": "^3.0.9"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/luxon": "^3.4.2",
-		"@types/node": "^22.10.7",
-		"np": "^10.1.0",
-		"tsx": "^4.19.2",
-		"typescript": "^5.7.3"
+		"@types/node": "^22.13.14",
+		"np": "^10.2.0",
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.2"
 	}
 }
