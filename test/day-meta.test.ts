@@ -27,4 +27,20 @@ describe("Day Metadata Tests", () => {
 		expect(meta.publicHoliday).toBe("Velikonoční pondělí");
 		expect(meta.shops.areOpen).toBe(false);
 	});
+
+	it("Easter Sunday in 2025", () => {
+		const meta = getDayMeta(DateTime.fromISO("2025-04-13"));
+
+		if (meta.easter) {
+			expect(meta.easter.name).toBe("Květná neděle");
+			expect(meta.easter.isGoodFriday).toBe(false);
+			expect(meta.easter.isHolySaturday).toBe(false);
+			expect(meta.easter.ieEasterSunday).toBe(false);
+			expect(meta.easter.isEasterMonday).toBe(false);
+		} else {
+			throw new Error("Easter Sunday expected");
+		}
+
+		expect(meta.shops.areOpen).toBe(true);
+	});
 });

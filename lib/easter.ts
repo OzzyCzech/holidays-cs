@@ -122,10 +122,10 @@ const names: Record<string, string> = {
  * @param date
  */
 export function getEasterDayName(date: DateTime | Date): string | undefined {
+	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 	if (isHolyWeek(date)) {
-		date = date instanceof Date ? DateTime.fromJSDate(date) : date;
 		const index = date.diff(getEaster(date.year), "days").as("days");
-		return index in names ? names[index] : undefined;
+		return names[index] ?? undefined;
 	}
 
 	return undefined;
