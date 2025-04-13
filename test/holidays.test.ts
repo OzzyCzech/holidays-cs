@@ -10,11 +10,11 @@ describe("Public Holiday Tests", () => {
 	});
 
 	it("Easter Monday is holiday", () => {
-		expect(getPublicHoliday(DateTime.fromISO("2024-04-01"))).toBe("Velikonoční pondělí");
+		expect(getPublicHoliday(DateTime.fromISO("2025-04-21"))).toBe("Velikonoční pondělí");
 	});
 
 	it("Good Friday is holiday", () => {
-		expect(getPublicHoliday(DateTime.fromISO("2024-03-29"))).toBe("Velký pátek");
+		expect(getPublicHoliday(DateTime.fromISO("2025-04-18"))).toBe("Velký pátek");
 	});
 
 	it("Check that some days are not holidays", () => {

@@ -6,7 +6,7 @@ import { DateTime, Interval } from "luxon";
  * @param year
  */
 export function getEasterMonday(year: number): DateTime {
-	return DateTime.fromJSDate(EasterDate.getEasterMonday(year));
+	return DateTime.fromJSDate(EasterDate.getEasterMonday(year)).setZone("Europe/Prague").startOf("day");
 }
 
 /**
@@ -23,7 +23,7 @@ export function isEasterMonday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getEaster(year: number): DateTime {
-	return DateTime.fromJSDate(EasterDate.getEaster(year));
+	return DateTime.fromJSDate(EasterDate.getEaster(year)).setZone("Europe/Prague").startOf("day");
 }
 
 /**
@@ -31,7 +31,7 @@ export function getEaster(year: number): DateTime {
  * @param year
  */
 export function getEasterSunday(year: number): DateTime {
-	return DateTime.fromJSDate(EasterDate.getEasterSunday(year));
+	return DateTime.fromJSDate(EasterDate.getEasterSunday(year)).setZone("Europe/Prague").startOf("day");
 }
 
 /**
@@ -47,7 +47,7 @@ export function isEasterSunday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getHolySaturday(year: number): DateTime {
-	return DateTime.fromJSDate(EasterDate.getHolySaturday(year));
+	return DateTime.fromJSDate(EasterDate.getHolySaturday(year)).setZone("Europe/Prague").startOf("day");
 }
 
 /**
@@ -63,7 +63,7 @@ export function isHolySaturday(date: DateTime | Date): boolean {
  * @param year
  */
 export function getGoodFriday(year: number): DateTime {
-	return DateTime.fromJSDate(EasterDate.getGoodFriday(year));
+	return DateTime.fromJSDate(EasterDate.getGoodFriday(year)).setZone("Europe/Prague").startOf("day");
 }
 
 /**
@@ -83,8 +83,8 @@ export function getHollyWeekInterval(year: number): Interval {
 	const easter = getEaster(year);
 
 	return Interval.fromDateTimes(
-		easter.minus({ days: 7 }), // Palm Sunday
-		easter.plus({ days: 1 }), // Easter Monday
+		easter.minus({days: 7}), // Palm Sunday
+		easter.plus({days: 1}), // Easter Monday
 	);
 }
 
@@ -93,7 +93,7 @@ export function getHollyWeekInterval(year: number): Interval {
  * @param date
  */
 export function isHolyWeek(date: DateTime | Date): boolean {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
+	date = (date instanceof Date ? DateTime.fromJSDate(date) : date).setZone("Europe/Prague").startOf("day");
 	const interval = getHollyWeekInterval(date.year);
 	if (!interval.isValid) {
 		return false;
@@ -122,9 +122,10 @@ const names: Record<string, string> = {
  * @param date
  */
 export function getEasterDayName(date: DateTime | Date): string | undefined {
-	date = date instanceof Date ? DateTime.fromJSDate(date) : date;
+	date = (date instanceof Date ? DateTime.fromJSDate(date) : date).setZone("Europe/Prague").startOf("day");
 	if (isHolyWeek(date)) {
-		const index = date.diff(getEaster(date.year), "days").as("days");
+		const easter = getEaster(date.year).setZone("Europe/Prague").startOf("day");
+		const index = date.diff(easter, "days").as("days");
 		return names[index] ?? undefined;
 	}
 

@@ -4,7 +4,7 @@ import { getDayMeta } from "../lib";
 
 describe("Day Metadata Tests", () => {
 	it("Christmas Eve in 2024", () => {
-		const meta = getDayMeta(DateTime.fromISO("2024-12-24"));
+		const meta = getDayMeta(DateTime.fromISO("2024-12-24T09:08:34"));
 		expect(meta.publicHoliday).toBe("Štědrý den");
 
 		expect(meta.shops.areOpen).toBe(true);
@@ -12,7 +12,7 @@ describe("Day Metadata Tests", () => {
 	});
 
 	it("Easter Monday in 2024", () => {
-		const meta = getDayMeta(DateTime.fromISO("2024-04-01"));
+		const meta = getDayMeta(DateTime.fromISO("2024-04-01T09:08:34"));
 
 		if (meta.easter) {
 			expect(meta.easter.name).toBe("Velikonoční pondělí");
@@ -29,7 +29,7 @@ describe("Day Metadata Tests", () => {
 	});
 
 	it("Easter Sunday in 2025", () => {
-		const meta = getDayMeta(DateTime.fromISO("2025-04-13"));
+		const meta = getDayMeta(DateTime.fromISO("2025-04-13T09:08:34"));
 
 		if (meta.easter) {
 			expect(meta.easter.name).toBe("Květná neděle");

@@ -24,54 +24,54 @@ describe("Easter Tests", () => {
 	});
 
 	it("If day is part of Holy Week", () => {
-		expect(isHolyWeek(DateTime.fromISO("2024-03-23"))).toBe(false);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-24"))).toBe(true); // Palm Sunday
-		expect(isHolyWeek(DateTime.fromISO("2024-03-25"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-26"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-27"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-28"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-29"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-30"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-03-31"))).toBe(true);
-		expect(isHolyWeek(DateTime.fromISO("2024-04-01"))).toBe(true); // Easter Monday
-		expect(isHolyWeek(DateTime.fromISO("2024-04-02"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-12"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-13"))).toBe(true); // Palm Sunday
+		expect(isHolyWeek(DateTime.fromISO("2025-04-14"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-15"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-16"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-17"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-18"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-19"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-20"))).toBe(true);
+		expect(isHolyWeek(DateTime.fromISO("2025-04-21"))).toBe(true); // Easter Monday
+		expect(isHolyWeek(DateTime.fromISO("2025-04-22"))).toBe(false);
 
-		expect(isHolyWeek(DateTime.fromISO("2024-12-24"))).toBe(false);
-		expect(isHolyWeek(DateTime.fromISO("2024-12-25"))).toBe(false);
-		expect(isHolyWeek(DateTime.fromISO("2024-12-26"))).toBe(false);
-		expect(isHolyWeek(DateTime.fromISO("2024-12-31"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-12-24"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-12-25"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-12-26"))).toBe(false);
+		expect(isHolyWeek(DateTime.fromISO("2025-12-31"))).toBe(false);
 		expect(isHolyWeek(DateTime.fromISO("2025-01-01"))).toBe(false);
 	});
 
 	it("Get Holy Week days names in 2024", () => {
-		expect(getEasterDayName(DateTime.fromISO("2025-03-23"))).toBeFalsy();
+		expect(getEasterDayName(DateTime.fromISO("2025-03-23T09:08:34"))).toBeFalsy();
 
-		expect(getEasterDayName(DateTime.fromISO("2024-03-24"))).toBe("Květná neděle");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-25"))).toBe("Modré pondělí");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-26"))).toBe("Šedivé úterý");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-27"))).toBe("Škaredá středa");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-28"))).toBe("Zelený čtvrtek");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-29"))).toBe("Velký pátek");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-30"))).toBe("Bílá sobota");
-		expect(getEasterDayName(DateTime.fromISO("2024-03-31"))).toBe("Velikonoční neděle");
-		expect(getEasterDayName(DateTime.fromISO("2024-04-01"))).toBe("Velikonoční pondělí");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-24T09:08:34"))).toBe("Květná neděle");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-25T09:08:34"))).toBe("Modré pondělí");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-26T11:34:34"))).toBe("Šedivé úterý");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-27T16:30:34"))).toBe("Škaredá středa");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-28T12:08:34"))).toBe("Zelený čtvrtek");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-29T09:08:34"))).toBe("Velký pátek");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-30T09:08:34"))).toBe("Bílá sobota");
+		expect(getEasterDayName(DateTime.fromISO("2024-03-31T06:08:34"))).toBe("Velikonoční neděle");
+		expect(getEasterDayName(DateTime.fromISO("2024-04-01T11:00:34"))).toBe("Velikonoční pondělí");
 
-		expect(getEasterDayName(DateTime.fromISO("2025-04-02"))).toBeFalsy();
+		expect(getEasterDayName(DateTime.fromISO("2025-04-02T09:08:34"))).toBeFalsy();
 	});
 
 	it("Get Holy Week days names in 2025", () => {
-		expect(getEasterDayName(DateTime.fromISO("2025-03-12"))).toBeFalsy();
+		expect(getEasterDayName(DateTime.fromISO("2025-03-12T09:08:34"))).toBeFalsy();
 
-		expect(getEasterDayName(DateTime.fromISO("2025-04-13"))).toBe("Květná neděle");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-14"))).toBe("Modré pondělí");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-15"))).toBe("Šedivé úterý");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-16"))).toBe("Škaredá středa");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-17"))).toBe("Zelený čtvrtek");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-18"))).toBe("Velký pátek");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-19"))).toBe("Bílá sobota");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-20"))).toBe("Velikonoční neděle");
-		expect(getEasterDayName(DateTime.fromISO("2025-04-21"))).toBe("Velikonoční pondělí");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-13T09:08:34"))).toBe("Květná neděle");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-14T09:08:34"))).toBe("Modré pondělí");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-15T11:34:34"))).toBe("Šedivé úterý");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-16T16:30:34"))).toBe("Škaredá středa");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-17T12:08:34"))).toBe("Zelený čtvrtek");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-18T09:08:34"))).toBe("Velký pátek");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-19T09:08:34"))).toBe("Bílá sobota");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-20T06:08:34"))).toBe("Velikonoční neděle");
+		expect(getEasterDayName(DateTime.fromISO("2025-04-21T20:00:34"))).toBe("Velikonoční pondělí");
 
-		expect(getEasterDayName(DateTime.fromISO("2025-04-22"))).toBeFalsy();
+		expect(getEasterDayName(DateTime.fromISO("2025-04-22T09:08:34"))).toBeFalsy();
 	});
 });
