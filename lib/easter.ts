@@ -83,8 +83,8 @@ export function getHollyWeekInterval(year: number): Interval {
 	const easter = getEaster(year);
 
 	return Interval.fromDateTimes(
-		easter.minus({days: 7}), // Palm Sunday
-		easter.plus({days: 1}), // Easter Monday
+		easter.minus({ days: 7 }), // Palm Sunday
+		easter.plus({ days: 1 }), // Easter Monday
 	);
 }
 
