@@ -22,8 +22,8 @@
 		"build": "rm -rf dist && tsc",
 		"prepare": "npm run build",
 		"test": "tsc --noEmit && vitest",
-		"format": "biome format --write",
-		"lint": "biome lint",
+		"format": "biome check --write .",
+		"format:check": "biome check .",
 		"release": "np"
 	},
 	"engines": {
