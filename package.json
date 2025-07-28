@@ -35,16 +35,16 @@
 		"dist/*"
 	],
 	"dependencies": {
-		"easter-date": "1.0.1",
-		"luxon": "^3.6.1",
-		"vitest": "^3.2.2"
+		"easter-date": "1.0.3",
+		"luxon": "^3.7.1",
+		"vitest": "^3.2.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.1.2",
 		"@types/luxon": "^3.6.2",
-		"@types/node": "^22.15.30",
+		"@types/node": "^24.1.0",
 		"np": "^10.2.0",
-		"tsx": "^4.19.4",
+		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
 	}
 }
