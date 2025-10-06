@@ -996,10 +996,10 @@ dot-prop@^9.0.0:
   dependencies:
     type-fest "^4.18.2"
 
-easter-date@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-1.0.4.tgz#81b2e9c231e1f1c488dbc0d3b1447129ff5a750f"
-  integrity sha512-ZueX8nmFrP8XYqih1joqoHQmImfO+pymgixSG2vwD8MbsZcP/zvk6WrT5YSEhazOHRn1BSb71BBMN7O5fFbxyg==
+easter-date@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/easter-date/-/easter-date-1.0.5.tgz#fc704d85b40685c9beda831090c7271c6502ea26"
+  integrity sha512-AaDoEM/t7oBIPMgZ4Et8psWEYgZC7k39DLGaIU2G246VNnKZ8o3A5qIlIKaJyHxiIyVvUnyLvohWAC2iMKRZWQ==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
