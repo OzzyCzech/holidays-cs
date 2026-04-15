@@ -1,8 +1,9 @@
 {
 	"compilerOptions": {
+		"rootDir": "lib",
 		"outDir": "dist",
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"moduleDetection": "force",
 		"allowSyntheticDefaultImports": true,
 		"target": "es2022",
