@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       easter-date:
-        specifier: 1.1.3
-        version: 1.1.3
+        specifier: 1.2.0
+        version: 1.2.0
       luxon:
         specifier: ^3.7.2
         version: 3.7.2
@@ -19,8 +19,8 @@ importers:
         specifier: 2.4.12
         version: 2.4.12
       '@ozzyczech/tsconfig':
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.1.0
+        version: 2.1.0
       '@types/luxon':
         specifier: ^3.7.1
         version: 3.7.1
@@ -273,8 +273,8 @@ packages:
   '@oxc-project/types@0.124.0':
     resolution: {integrity: sha512-VBFWMTBvHxS11Z5Lvlr3IWgrwhMTXV+Md+EQF0Xf60+wAdsGFTBx7X7K/hP4pi8N7dcm1RvcHwDxZ16Qx8keUg==}
 
-  '@ozzyczech/tsconfig@2.0.0':
-    resolution: {integrity: sha512-AvFjtFd8KA5OogIgG9+PJ4mhrRY3eiICWByRWrjFaEAJGSowubNvq04uginoHpoISb43xWqdcvQh4Za52EuyRA==}
+  '@ozzyczech/tsconfig@2.1.0':
+    resolution: {integrity: sha512-L32Qt7eKzrQspK9IuNIkDOBdYVjF+B/kn5jAtHQRL8ObwMIDiZSlf+Y2NKi9M1D96dbCv0tYd2cnWqDM4UzNEw==}
     engines: {node: '>=24'}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.15':
@@ -440,9 +440,9 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  easter-date@1.1.3:
-    resolution: {integrity: sha512-7y47Wp11JZAl07MNvZMJu5H3SGn2hSj208BZG3G0QVMF+6u43P2GK11PTEtoxJwE2rkJ2Mxhs4gV+luSuoSNYA==}
-    engines: {node: '>=20'}
+  easter-date@1.2.0:
+    resolution: {integrity: sha512-1ol9fwjiHTbaQVrhXiJgMm17oU8nWz8y+vBmnna4CF5ntUud5Y/3wFlb46aocOXEKaIDAVo2A+wwwsFFNOWjyw==}
+    engines: {node: '>=22'}
 
   es-module-lexer@2.0.0:
     resolution: {integrity: sha512-5POEcUuZybH7IdmGsD8wlf0AI55wMecM9rVBTI/qEAy2c1kTOm3DjFYjrBdI2K3BaJjJYfYFeRtM0t9ssnRuxw==}
@@ -862,7 +862,7 @@ snapshots:
 
   '@oxc-project/types@0.124.0': {}
 
-  '@ozzyczech/tsconfig@2.0.0': {}
+  '@ozzyczech/tsconfig@2.1.0': {}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.15':
     optional: true
@@ -986,7 +986,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  easter-date@1.1.3: {}
+  easter-date@1.2.0: {}
 
   es-module-lexer@2.0.0: {}
 
