@@ -12,16 +12,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # for creating the GitHub Release
-      id-token: write      # REQUIRED for OIDC trusted publishing
+      contents: write # for creating the GitHub Release
+      id-token: write # REQUIRED for OIDC trusted publishing
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
-          node-version: "25"
+          node-version: "24"
           registry-url: "https://registry.npmjs.org"
           cache: pnpm
 
