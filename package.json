@@ -42,7 +42,7 @@
 	},
 	"packageManager": "pnpm@11.24.0",
 	"dependencies": {
-		"easter-date": "2.0.1",
+		"easter-date": "2.0.2",
 		"luxon": "^3.7.2"
 	},
 	"devDependencies": {
