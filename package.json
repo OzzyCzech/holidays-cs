@@ -46,7 +46,7 @@
 		"luxon": "^3.7.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.13",
+		"@biomejs/biome": "2.5.15",
 		"@ozzyczech/tsconfig": "^2.1.0",
 		"@types/luxon": "^3.7.6",
 		"@types/node": "^26.6.5",
